@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    <!-- shallow copy deep copy -->
+    
+    let original={
+        name:"priya",
+        age:20,
+        address:{city:"chennai",state:"tn"}
+
+    }
+ 
+    let copied=original
+    console.log(copied)
+    
+    //change the property after copied to another variable
+
+    copied.age=26
+    console.log(copied) //affect both
+
+    //shallow copy
+    // 1.obj.assign
+    // 2.spread operator
+    
+    // spread and rest operator
+
+    arr=[1,2,3,4,]
+    console.log(arr)
+    console.log(...arr) // spread those 1 2 3 4
+
+    console.log([...arr])
+
+
+    let obj={
+        name:"priya"
+    }
+    console.log({...obj})
+
+
+    //destructuring--assignig value of a array to variables
+
+let arr=[1,2,35,454,5]
+
+let [a,b]=arr
+let [a,b,...c]=arr
+console.log(c)
+
+
+// shallow copy-not affect original-1st level
+//affect 2nd level of original -city-nested 
+
+let origina={
+        name:"priya", //not affect original
+        age:20,
+        address:{city:"chennai",state:"tn"} //affect original
+
+    }
+
+let copy={...origina}
+
+//deep copy --it wont affect original array -.........drawback-function wont be copied
+let copiedobj=json.stringfy(original) // use json
+let copiedobj2=JSON.parse(json.stringfy(original))
+console.log(copiedobj)
+
+
+</script>
+</body>
+</html>

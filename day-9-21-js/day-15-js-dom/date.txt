@@ -1,0 +1,12 @@
+
+now.date
+
+setFullYear
+setMonth(11)
+
+tostring
+todatestring
+
+toISOstring
+
+getting component->setting component -> string convert->time()

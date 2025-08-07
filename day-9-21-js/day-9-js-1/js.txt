@@ -1,0 +1,42 @@
+www.google.com -domain name
+dns-> converted into ip adress -> htttp (get )->server   (HTML, css js)-> comeback to the browser
+
+source code -> parser(code is converted into small chunks) ->ast(check errors, structure the html)->
+->jit(just in time)->interpret(code line by line)
+     
+
+
+var-redeclaration is possible -var a , var a
+let-
+const-
+we can directly intialize the value a=10 without declaring it will consider as var 
+
+
+output statement
+-----------------
+alert-("      ")
+prompt-
+console-
+confirm- yes or no-o/p- true or false
+print-
+debugger- we can keep checkpoint in each line and get whether error is there are not
+
+
+
+execution
+----------
+1.memory (if we are declaring a value it will take some memory)-> 2.execution (the intializationa and console part )
+
+
+scope
+-----          
+var-global scope
+let -local -if we declare we cant access wherever we want
+
+
+call stack-store those var and function
+lifo- taking some time
+
+shift enter -> for writing more than one line in console
+node js/script.js to run the js file  
+

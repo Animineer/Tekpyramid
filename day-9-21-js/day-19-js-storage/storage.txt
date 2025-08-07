@@ -1,0 +1,27 @@
+storage-in inspect->application
+----------------
+Local Strorage -only delete if user wants to delete
+sesion Strorage-delete -by closing tab
+inderdb
+cookies
+
+local storage
+-------------
+hashing-protecting password (the password will be in type of some other type of alpha numberical)
+
+methods
+--------
+getItem(key)
+setItem(key,value)
+clear()
+remove(key)
+
+
+
+Bom -browser object model
+-------
+window- ceil window    move, resize, close
+naviagation-= get browser data 
+location-get or ctrl ulr
+screen-
+history-

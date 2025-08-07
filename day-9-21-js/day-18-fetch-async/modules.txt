@@ -1,0 +1,31 @@
+modules- import or export one js file to another
+2type
+  name modules
+  defult modules
+
+changefile as modles ->change file name  .mj
+
+export 
+import
+
+node init
+
+
+------------------------------------------------------------
+SET , MAP , DESTRUCTIONG
+
+SET- wont take duplicates
+difference-present in 1 not in 2
+intersection- present in both arr
+union- ignore duplicates both a and both
+
+map- store in key and value pairs
+
+DESTRUCTIONG-
+
+function gopal(a,b)
+{
+    return[a+b , a-b]
+}
+
+const [sum, sub]=(5,7)

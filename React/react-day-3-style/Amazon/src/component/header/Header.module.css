@@ -1,0 +1,46 @@
+
+.container{
+    box-shadow: 0px 2px 1px  rgb(129, 126, 126);
+    align-items: center;
+}
+.container,ul ,.container>div {
+ display: flex; 
+ justify-content: space-around;
+ 
+}
+
+.right img{
+    margin: 0px 10px; 
+    height:20px
+}
+li{
+    margin-left: 8px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+ul{
+margin-left: 0 10px;    
+}
+.search{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 350px;
+    background-color: darkgrey;
+      border-radius: 5px;
+   
+}
+.search>input{
+    width: 300px;
+    background-color: darkgray;
+    border: none;
+  
+     
+    
+}
+.search :hover{
+    background-color: white;
+        border: none;
+}
+

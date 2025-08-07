@@ -1,0 +1,68 @@
+cmd - code .
+Rahul shibi
+--------------
+single page application- fb, gmail
+
+features
+--------
+jsx-write html,css js
+virtual dom- cant seent- it will be in memory
+diffiing algorithm (finding difference)-reconcilation process- 
+   *create new virtual dom
+   *compare with each node- `
+   *whether it is change
+   *then it will update to real dom
+
+component based architecture -build ui -by creating small piece, reusable
+write once use it anywhere
+declarative-the process will be easy compared to js      js is imperative-since if we want to apply event
+   
+            we need to access, apply event, after that what should happend
+huge ecosystem -we can use multiplte librearies like vite
+huge community 
+
+realdom-html-converted into - tree like structure-creating element - appending element- 
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+rules for jsx
+-------------
+lower case html tags- two diffetiate between component(function name) and html tag
+all child element should wrap in parent element
+js -to write js code -jsx expretion -{}
+ClassName- instead of class-since we have function and class component 
+htmlfor- instead of for -(in form)
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+component
+-----
+we can use it anywhere
+
+
+in js function - if function has return keyword - it will return something
+
+in react
+function (){  -pascal -naming convention
+
+    return(
+       <>
+       </>-empty fragment - wont create nodes
+    )
+}
+
+----------------------------------------------------------------------------------------
+
+client side rendering and server- side rendering
+->rendering- displayin html, css in our webpage
+
+node modules-
+public- strore external 
+
+named , default ->export and import
+   export default element      in app.js ->{element}  -> import -change name using as keyword
+   export {element}
+
+

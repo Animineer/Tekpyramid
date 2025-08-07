@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // 1. Write a program to check if a number is even or odd.
+        function oddEven(num) {
+            return num % 2 == 0 ? "odd-number" : "even-number";
+        }
+        console.log(oddEven(5))
+
+        // Write a program to find the greatest of 3 numbers using if...else if...else.
+
+        //check a>b then inside  a>c 
+        //since b is not compared with c
+        //check b>c
+        function Greatest(a, b, c) {
+            if (a > b) {
+                if (a > c) {
+                    console.log("a is greater" + a);
+                }
+                else {
+
+
+                    console.log("c is grater" + c);
+                }
+            }
+            else if (b > c) {
+                {
+                    console.log("b is grater" + b);
+                }
+
+            }
+            else {
+                console.log("c is grater" + c)
+            }
+
+        }
+        Greatest(60, 50, 66);
+
+        // 3. Create a pattern like this using for loop: 
+
+        // * 
+
+        // ** 
+
+        // *** 
+
+        // **** 
+        var n = 5
+
+        for (i = 0; i <= n; i++) //outer will run once and inner will run till i value
+        {
+            let star = "";
+            for (j = 0; j <= i; j++) // this loop count added each time 
+            {
+                star += "*"
+            }
+            console.log(star);
+        }
+
+
+        // 4. Print the reverse of a string using a loop.
+
+        //     For example:
+        //         Input: "hello" → Output: "olleh"
+
+        // str2=str.split("").reverse().join("") 
+        // console.log(str2)
+
+        var s = "hello"
+        s2 = ""
+
+        for (i = s.length; i >= 0; i--) {
+
+
+            s2 += s.charAt(i)
+        }
+        console.log(s2)
+
+        // 5. Write a program to Check whether the number is prime or not?
+
+        var num = 5;
+
+        for (i = 0; i < num; i++)
+            if (num % 2 == 0 || num > 2) {
+                console.log("the number is not a prime number :" + num);
+            }
+            else
+                console.log("the number is a prime number :" + num);
+
+
+
+
+
+        // 6. Write a function to generate the following pattern:
+
+        // 1
+
+        // 1 2
+
+        // 1 2 3
+
+        // 1 2 3 4
+
+        var n = 4;
+
+        for (i = 1; i <= n; i++) {
+
+            var empty = "";
+            for (j = 1; j<= i; j++) {
+
+                empty += j;
+                
+            }
+            console.log(empty)
+        }
+
+
+        // 7. Write a program that checks whether a string is a palindrome (same forward and backward), without using built-in reverse methods.
+
+        str="mada"
+        str2=str.split("").reverse().join("")
+        if(str==str2) console.log("palindrom")
+        else console.log("not apalindrom")
+
+
+       var string ="madam"
+       empty="";
+       for(i=string.length; i>=0; i--)
+       {
+           s2=string.charAt(i)
+           empty+=s2
+           
+        } 
+       console.log("reverse of string is "+empty)
+       console.log(string === empty ? "the string is palindrome"  : "the string is not a palindrome");
+       
+
+
+//        8. Generate Fibonacci series up to N numbers using a while loop. 
+// 0 1 1 2 3 5 8
+
+     function generateFibonacci(n) {
+
+     let num1 = 0, num2 = 1, count = 0;
+
+  while (count < n) {
+
+    console.log(num1);
+
+    let next = num1 + num2;
+    // next= 0+1  1+1  1+3   2+4
+    num1 = num2;
+    //num1= 1      1    2     4
+    num2 = next;
+    //num2=1       2    4     6
+    count++;
+
+  }
+}
+
+
+generateFibonacci(10);
+
+
+
+
+
+
+
+// 9. Write a function that takes a number and returns: 
+
+// "Fizz" if divisible by 3 
+
+// "Buzz" if divisible by 5 
+
+// "FizzBuzz" if divisible by both 3 and 5 
+
+// The number itself otherwise 
+
+function FizzBuzz(num)
+{
+    if (num%3==0 && num%5==0)
+    return "fizzbuzz"
+    else if (num%3==0)
+    return "fizz"
+    else if (num%5==0)
+    return "buzz"
+    else return num
+}
+console.log(FizzBuzz(1))
+
+// 10. Write a function to count how many times each character appears in a string. 
+// Input: hello  
+// Output: { h: 1, e: 1, l: 2, o: 1 } 
+
+? Input: hello  
+
+? Output: { h: 1, e: 1, l: 2, o: 1 } 
+
+function countCharacters(str) {
+
+  const freq = {}; 
+
+  for (let char of str) {
+
+    if (freq[char]) {
+
+      freq[char]++; 
+
+       } 
+     else {
+      freq[char] = 1; 
+    }
+  }
+
+  return freq;
+}
+
+console.log(countCharacters("hello"));
+
+
+ 
+
+// 11. You have an array of numbers. Return a new array with only the unique elements (no duplicates) using loops and conditionals only. 
+
+function getUniqueElements(arr) {
+  let uniqueArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let exists = false;
+
+    for (let j = 0; j < uniqueArr.length; j++) {
+      if (arr[i] === uniqueArr[j]) {
+        exists = true;
+        break;
+      }
+    }
+
+    if (!exists) {
+      uniqueArr.push(arr[i]);
+    }
+  }
+
+  return uniqueArr;
+}
+
+let numbers = [1, 2, 2, 3, 4, 4, 5];
+
+console.log(getUniqueElements(numbers));
+
+
+
+// arr[i]==arr[j]   =>arr[i]=
+
+let arr=[5,7,5,8,10,12,8]
+
+for(i=0;i<arr.length; i++)
+{
+    for(j=i+1; j<arr.length; j++)
+    {
+        if(arr[i]==arr[j])
+        {
+            arr[i]=""
+        }
+    }
+}
+a=[]
+for(i=0;i<arr.length;i++)
+{
+    if(Number.isInteger(arr[i]))
+    {
+        
+        a[a.length]=arr[i]
+    }
+}console.log(a)
+// 12. Create a pyramid pattern of stars for a given number of rows: 
+
+//      * 
+
+//     * * 
+
+//    * * * 
+
+//   * * * * 
+
+num=4;
+
+for(i=0;i<=num;i++)
+{
+    empty="";
+
+    for (let j = 1; j <= num-i; j++) { // 1st it will leave 1 space and then execute next for loop
+      empty += " ";   //next, time it will give two space and then execute next loop twice
+    }
+    for(k=1;k<=i;k++)
+    {
+     empty+="* "
+    }
+console.log(empty)
+}
+
+
+
+
+// 13. Write a JavaScript program to find factorial of a number using a for loop. 
+
+// 5 x 4 x 3 x 2 x 1 = 120
+
+let fib=4;
+// fact=num * (num-1) * (num-2) * (num-3)*(num-4)
+// console.log(fact)
+var a=1
+for (i=1; i<=fib; i++)
+{
+    
+   a*=i
+}
+console.log(a)
+
+
+// 14. Write a JavaScript program that checks if two strings are anagrams (e.g., "listen" and "silent"). 
+
+
+function areAnagrams(str1, str2) {
+
+  let s1 = str1.replace(/\s/g, "").toLowerCase();
+  let s2 = str2.replace(/\s/g, "").toLowerCase();
+
+  if (s1.length !== s2.length) return false;
+
+  let sortedStr1 = s1.split("").sort().join("");
+  let sortedStr2 = s2.split("").sort().join("");
+
+  return sortedStr1 === sortedStr2;
+}
+
+let word1 = "listen";
+let word2 = "silent";
+
+console.log(`Are "${word1}" and "${word2}" anagrams?`, areAnagrams(word1, word2));
+
+//anagram
+var aa='string';
+var bb='string';
+var a=[...aa];
+var b=[...bb];
+// function fun(s1,s2){
+//     var s1=s1.split('');
+//     s1.sort();
+//     var s2=s2.split('');
+//     s2.sort();  //use s2.join() to make it string and compare without loop
+//     if(s1.length!=s2.length)return 'Not an ANAGRAM'
+//     else {
+//         for (let i = 0; i < s1.length; i++) {
+//             if(s1[i]!=s2[i])return 'Not an Anagram'
+//         }
+//         return a+'\t'+b +' are anagrams';
+//     }
+// return s1;
+// }
+// console.log(fun(a,b));
+
+let str = "silent"
+let str2 = "listen"
+count={};
+ 
+if(str.length != str2.length){
+    console.log("not anagram")
+}else{
+    for(let i=0;i<str.length;i++){
+   count[str[i]]= (count[str[i]] || 0)+1 //if count[str[i]] doesnot have value it will add with 0
+   count[str2[i]]= (count[str2[i]] || 0)-1
+}
+console.log(count)
+let dummy=0
+for(let key in count){
+    if(count[key]!=0){
+        dummy++
+    }
+}
+if (dummy !=0){
+        console.log('NA')
+    }else{
+        console.log("A")
+    }
+}
+
+// compare and make one empty ; if empty anagram or else not
+function fun(s1,s2){
+    if(s1.length!=s2.length)return 'Not an Anagram'
+ 
+    for (let i = 0; i <s1.length; i++) {
+        for (let j = 0; j <s2.length; j++) {
+
+            if(s1[i]==s2[j]){  //compare to string
+                s2[j]=''  //
+                break;
+            }
+        }
+    }
+    for (let i = 0; i <s2.length; i++) {
+        if (s2[i]!='') {
+            return 'Not an Anagram'
+        }
+    }
+    return 'Anagram'
+}
+console.log(fun(a,b));
+ 
+ 
+
+// 15. Reverse the words in a sentence, not characters. 
+
+// // Input: "hello world from js" 
+
+// // Output: "js from world hello" 
+
+function reverseWord(sentence)
+{
+  let word=sentence.split(" ")
+  let reverse=word.reverse()
+//   return word
+//   return sentence
+  return reverse.join(" ")
+   
+}
+console.log(reverseWord("hi how are you"))
+
+// without using inbuilt method
+var str='hi how are you';
+s1=[''],
+count=0; // will pass as the index
+
+for(i=0;i<str.length;i++){
+
+    if(str[i]==' '){  //if empty  - (2) this condition executes
+        s1[++count]='' //-count added-initialize the next index with empty string
+        //each character added to the empty string and added as word
+    }
+
+    else{           //(1)  this condition executes
+        s1[count]+=str[i] //else=str - store as a word in one index
+    }
+}
+
+output='';
+for(i=s1.length-1;i>=0;i--){   // revesrse the word
+    output+=s1[i]+' '  //add final with an empty 
+}
+ 
+console.log(output)
+
+// 16. Write a js program to find the second highest number in an array. 
+
+arr1=[5,4,28,53,47,98]
+
+for(i=0; i<arr1.length;i++)
+{
+  for(j=i+1; j<arr1.length;j++)
+  {
+     if(arr1[i]<arr1[j])
+     {
+     temp=arr1[i]
+     arr1[i]=arr1[j]
+     arr1[j]=temp
+     
+     }
+    }
+
+}
+console.log(arr1[1])
+// 17. Find Missing Number in a Sequence of numbers from 1 to N 
+
+function fms(num)
+{
+    count=1
+    for(i=0; i<num.length; i++)
+    {
+        if(count!=num[i])   //  
+        {
+            console.log(count)   // print the count
+            i-- // to restore the i value - the index value will be same
+        }count ++   //increment count after the condition block
+    }
+    
+    
+}
+
+let numbers = [1, 2, 5,10];
+fms(numbers)
+
+
+// 18. Write a JS program to Check if the given number is Armstrong Number or not
+ //1³ + 5³ + 3³ = 1 + 125 + 27 = 153 3length of digit
+ num=153;
+//  a=Math.trunc(Math.log10(num)+1)
+ numstr=num.toString();
+ pow=numstr.length
+ 
+ sum=0
+ for (i=0; i<pow; i++)
+{
+    sum+=Math.pow(parseInt(numstr[i]),pow)
+}
+ if(sum===num)
+ {
+    console.log("armstrong")
+
+ }
+ else{
+    console.log("not armstron")
+ }
+
+//
+
+let number =154
+let strnum=""+number
+let final=0
+for (let i in strnum )
+{
+    final+=strnum[i]**strnum.length
+}
+console.log (final==number ? "armstrong" : "not armstron")
+
+ 
+// maximum difference between tw number
+
+
+// 19. Sort an Array Without Built-in sort() 
+
+  function sortArray(arr) {
+  let n = arr.length;
+
+  for (let i = 0; i < n - 1; i++) {
+
+    for (let j = 0; j < n - i - 1; j++) {
+
+      if (arr[j] > arr[j + 1]) {
+
+
+        let temp = arr[j];
+
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+
+  return arr;
+}
+
+let number = [5, 2, 8, 3, 1];
+console.log("Sorted array:", sortArray(number));
+
+
+// 20. Find the maximum difference between two numbers in an array in JavaScript? 
+
+
+
+function maxDifference(arr) {  
+  if (arr.length < 2) 
+  return 0;
+
+  let minElement = arr[0];
+  let maxDiff = arr[1] - arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+
+    let currentDiff = arr[i] - minElement;
+    
+    maxDiff = Math.max(maxDiff, currentDiff);
+    minElement = Math.min(minElement, arr[i]);
+  }
+
+  return maxDiff;
+}
+
+const arr = [2, 3, 10, 6, 4, 8, 1];
+
+console.log("Maximum difference:", maxDifference(arr));
+//-----------------------------------------
+arr=[1,2,5,7,8,9,12,6]
+let min=arr[0]
+let max=arr[0]
+for( let i in arr)
+{
+    if(arr[i]<min) min=arr[i]
+    if(arr[i]>max) max=arr[i]    
+}
+
+let diff=max-min
+console.log(diff)
+
+// 21. Find the largest number in an array in JavaScript.
+//declare a variable ->store first index
+//for loop
+// compare variable with all other element
+// asign if the condition is true
+function findLargest(arr) {
+  let max = arr[0]; // Assume first element is largest
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i]; // Update max if current element is greater
+    }
+  }
+  return max;
+}
+
+// 22. How Remove the first element from an array in JavaScript?
+// run for loop from i=1
+function removeFirstElement(arr) {
+  let newArr = [];
+  for (let i = 1; i < arr.length; i++) {
+    newArr[newArr.length] = arr[i]; // Skip the first element
+  }
+  return newArr;
+}
+
+// 23. Write a Program to find a sum of an array?
+//emty=0
+//for loop
+//empty+=arr[i]
+
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]; // Add each element to sum
+  }
+  return sum;
+}
+
+// 24.Write a Program to merge two arrays in JavaScript?
+// empty array
+// for loop---two array
+//empty[empty.length]=arr[i]and a[j]
+
+function mergeArrays(arr1, arr2) {
+  let merged = [];
+
+  // Add elements of first array
+  for (let i = 0; i < arr1.length; i++) {
+    merged[merged.length] = arr1[i];
+  }
+
+  // Add elements of second array
+  for (let i = 0; i < arr2.length; i++) {
+    merged[merged.length] = arr2[i];
+  }
+
+  return merged;
+}
+
+
+// 25. Find the Intersection of Two Arrays in JavaScript?	
+// check each element----> using 2 for loop ==
+//if condition true- store 1st array in empty array
+
+
+arr=[5,10,52,12,12,20]
+arr2=[6,10,52,12,12,23]
+
+let newarr=[]
+for (let i=0; i<arr.length ; i++)
+{   
+    for (let j=0; j<arr2.length ; j++)
+  {
+    if(arr[i]===arr2[j])
+    {
+        newarr[newarr.length]=arr[i]
+    }
+    
+}
+}
+console.log(newarr)
+//------------
+
+function intersection(arr1, arr2) {
+  let result = [];
+
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        // Check if already added to result
+
+        
+        let alreadyExists = false;
+
+        //remove duplicates
+        for (let k = 0; k < result.length; k++) {
+          if (result[k] === arr1[i]) {
+            alreadyExists = true;
+            break;
+          }
+        }
+        if (!alreadyExists) {
+          result[result.length] = arr1[i];
+        }
+      }
+    }
+  }
+
+  return result;
+}
+
+// 26. Find the Union of Two Arrays in JavaScript?
+// we will directly push to result array
+// we will declare a var with false
+// 
+let arr=[5,10,52,12,20]
+let arr2=[6,10,52,12,23]
+
+function union(arr1, arr2) {
+  let result = [];
+
+  // Add all elements from arr1
+  for (let i = 0; i < arr1.length; i++) {
+    result[result.length] = arr1[i];
+  }
+
+  // Add only non-duplicate elements from arr2
+  for (let i = 0; i < arr2.length; i++) {
+
+    let isDuplicate = false;
+    for (let j = 0; j < result.length; j++) {  
+      if (arr2[i] === result[j]) { //check whether arr2 value are in result
+        isDuplicate = true; // duplicates -if true the loop will cut off
+        break; //
+      }
+    }
+    if (!isDuplicate) { //no duplicates -will add
+      result[result.length] = arr2[i];
+    }
+  }
+
+  return result;
+}
+console.log(union(arr,arr2))
+
+// 27. Write a Program to find the minimum value in an array in JavaScript?
+function findMinimum(arr) {
+  let min = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i]; // Update if smaller value is found
+    }
+  }
+  return min;
+}
+
+// 28. Check if a String Contains Another String in JavaScript?
+function contains(str, sub) {
+  for (let i = 0; i <= str.length - sub.length; i++) {
+    let match = true;
+    for (let j = 0; j < sub.length; j++) {
+      if (str[i + j] !== sub[j]) {
+        match = false;
+        break;
+      }
+    }
+    if (match) return true;
+  }
+  return false;
+}
+
+// 29. Find the First Non-Repeated Character in a String in JavaScript?
+
+function firstNonRepeatedChar(str) {
+  for (let i = 0; i < str.length; i++) {
+    
+    let count = 0;
+    for (let j = 0; j < str.length; j++) {
+      if (str[i] === str[j]) count++;
+    }
+    if (count === 1) return str[i];
+  }
+  return null;
+}
+
+// 30. Find the Longest Word in a String in JavaScript?
+
+function longestWord(sentence) {
+  let word = "";
+  let maxLength = 0;
+  let current = "";
+
+  for (let i = 0; i <= sentence.length; i++) {
+    let char = sentence[i] || " "; // Add space at end for final word
+
+    if (char !== " ") {
+      current += char;
+    } else {
+      if (current.length > maxLength) {
+        word = current;
+        maxLength = current.length;
+      }
+      current = "";
+    }
+  }
+  return word;
+}
+
+// 31. Capitalize the First Letter of Each Word in a Sentence in JavaScript?
+
+function capitalizeWords(sentence) {
+  let result = "";
+  let capitalize = true;
+
+  for (let i = 0; i < sentence.length; i++) {
+    let char = sentence[i];
+    if (char === " ") {
+      capitalize = true;
+      result += char;
+    } else {
+      if (capitalize) {
+        if (char >= 'a' && char <= 'z') {
+          char = String.fromCharCode(char.charCodeAt(0) - 32);
+        }
+        capitalize = false;
+      }
+      result += char;
+    }
+  }
+  return result;
+}
+
+// 32. Convert an Array of Strings to Uppercase in JavaScript?
+
+function toUpperCaseArray(arr) {
+  let upper = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let str = arr[i];
+    let temp = "";
+
+    for (let j = 0; j < str.length; j++) {
+      let char = str[j];
+      if (char >= 'a' && char <= 'z') {
+        char = String.fromCharCode(char.charCodeAt(0) - 32);
+      }
+      temp += char;
+    }
+    upper[upper.length] = temp;
+  }
+
+  return upper;
+}
+
+// 33. Get the last element of an array in JavaScript?
+
+function getLastElement(arr) {
+  return arr[arr.length - 1];
+}
+
+// 34. Calculate the factorial of a number using recursion in JavaScript?
+
+function factorial(n) {
+
+  if (n === 0 || n === 1) return 1; // Base case
+  return n * factorial(n - 1); // Recursive call
+}
+
+// 35. Count Vowels in a String in JavaScript?
+
+function countVowels(str) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    let ch = str[i].toLowerCase();
+    if (ch === 'a' || ch === 'e' || ch === 'i' || ch === 'o' || ch === 'u') {
+      count++;
+    }
+  }
+  return count;
+}
+
+
+// 36. Get Unique Characters from a String in JavaScript?
+
+function uniqueChars(str) {
+  let result = "";          //declare an variable with string
+  for (let i = 0; i < str.length; i++) {  // run the loop-1
+   
+    let found = false;                     // declare and intialise the variable with false
+    for (let j = 0; j < result.length; j++) {  //run the loop-2
+     
+      if (str[i] === result[j]) {             // compare loop 1 and loop 2
+        found = true;                          // condition true - return true
+        break;
+      }
+      }
+
+// 1st for loop closed
+    if (!found)
+    {              //             
+      result += str[i];
+    }
+  }
+  return result;
+}
+
+// 37. Find largest number and second largest number from an array?
+
+function findTwoLargest(arr) {
+
+  let max1 = -Infinity;
+  let max2 = -Infinity;
+
+  for (let i = 0; i < arr.length; i++) {
+    
+    if (arr[i] > max1) {   // 1st largest ->
+      max2 = max1; 
+
+      max1 = arr[i];
+    
+    } else if (arr[i] > max2 && arr[i] !== max1) { //second largest
+      max2 = arr[i];
+    }
+  }
+  return [max1, max2];
+}
+
+// 38. Flatten an array without using in build flat method?
+
+// flattern an array 
+// check each index , whether is number or index
+//if array call that function 
+
+let arr=[5,1,50,[2,5,6],[[5]]]   //declare array
+let result=[]                    //declare one variable to stroe output
+function flatten(arr)            // create function 
+{
+    for(let i in arr)            // run the for loop
+    {
+       
+        if(Array.isArray(arr[i])) // check the condition whether the index is array
+        {
+            flatten(arr[i])       //call the function and pass the index as parameter- if condition is true
+        }
+        else
+        {
+            result[result.length]=arr[i]   //store the number value
+        }
+    }
+}
+
+
+flatten(arr)
+console.log(result)
+//print the prime numbers 
+let n=15
+
+for (let j=0; j<n ; j++)
+{
+  if(prime(j)) // passin the function 
+  {
+    console.log(j)
+   }
+}
+
+
+function prime(n)
+{
+if(n<=1) return false
+for(let i=2; i<n; i++)
+{
+    if(n%i==0)
+    {
+      return false
+    }
+    }
+return true;
+}
+
+// substring
+function isSubstring(str, subStr) {
+  // Get the lengths of both strings
+  const strLen = str.length;
+  const subLen = subStr.length;
+
+  // If subStr is longer than str, it can't be a substring
+  if (subLen > strLen) return false;
+
+  // Loop through each character of str
+  for (let i = 0; i <= strLen - subLen; i++) {
+    let match = true;
+
+    // Check if subStr matches starting at position i
+    for (let j = 0; j < subLen; j++) {
+      if (str[i + j] !== subStr[j]) {
+        match = false;
+        break;
+      }
+    }
+
+    // If match found, return true
+    if (match) return true;
+  }
+
+  // No match found
+  return false;
+}
+
+
+    </script>
+</body>
+
+</html>

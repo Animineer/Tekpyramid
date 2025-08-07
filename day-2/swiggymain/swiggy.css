@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+
+/* navbar */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    box-shadow: 0px 5px 15px rgba(119, 116, 116, 0.103);
+}
+
+nav .logo {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo>li {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+nav .logo img {
+    height: 30px
+}
+
+.bx-chevron-down {
+    color: orange;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+
+nav ul {
+    display: flex;
+
+}
+
+nav ul li {
+    font-size: small;
+    margin-left: 40px;
+
+}
+
+nav ul i {
+    margin-right: 10px;}
+
+    /* main */
+
+main{
+display: grid;
+grid-template-columns: 200px 200px 200px 200px;
+justify-content: center;
+
+}
+.products>img{
+width: 180px;
+}
+
+/* Footer */
+footer{
+    background-color: rgb(240, 240, 245);
+    padding-top: 20px;
+}
+
+.footer-download{
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+
+}
+.footer-download-right img{
+ height:40px;
+ margin-left:30px;
+}
+
+
+.footer-list{
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+    color: rgb(96, 99, 105);
+}

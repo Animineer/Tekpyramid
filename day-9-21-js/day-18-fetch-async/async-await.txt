@@ -1,0 +1,26 @@
+ function fetchapi()
+        {
+            let data= fetch ("https://dummyjson.com/products")
+            console.log(data)  //return promise
+        }
+        
+        
+        //using async and await
+        async function fetchapi()
+        {
+            let data=await fetch ("https://dummyjson.com/products")
+            console.log(data)  //give response
+        }
+        
+        //json
+        async function fetchapi()
+        {
+            let data=await fetch ("https://dummyjson.com/products")
+            let response=await data.json()
+            console.log(response)  //give response
+        }
+
+
+
+
+        fetchapi()

@@ -1,0 +1,43 @@
+object creation method-4
+1
+2.object constructor method-use new keyword
+ let obj=new object()
+ obj.name="tamil"
+
+3.fuction constructor
+  fuction obj(var a,var b)
+   this.name=a
+   this.age=b
+
+   let obj=new obj("dinesh",23)
+
+4.class constructor
+
+class student
+fuction obj(var a,var b)
+   this.name=a
+   this.age=b
+
+let obj=new obj("dinesh",23)
+
+
+
+methods
+create()- obj.create(obj1)- using refrence
+assign()-
+hasown()-boolean --check the keys
+entries()-return key and value in array
+seal()-only update keys & value- not add or delete
+
+
+
+math method
+-----------
+Math.max(),min()
+.ceil()-10.1-11   floor()-10.1-10   .trunc()- remove decimal  .round()- >=5
+
+.sqrt() 
+.cbrt()
+.random() -math.random(4)*10000->numebr of 0 deside the number of otp  0-1  0.1,0.2
+
+

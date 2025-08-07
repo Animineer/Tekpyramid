@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Forward Page</h2>
+    <button onclick="goBack()">Back</button>
+    <button onclick="goForward()">Forward</button>
+
+    <script>
+        function goBack() {
+            history.back();
+        }
+
+        function goForward() {
+            history.forward();
+        }
+    </script>
+</body>
+
+</html>
