@@ -1,0 +1,76 @@
+npm create vite@latest myapp
+RouterProvider
+-----------------
+1)create 4 component
+  
+  home 
+  about 
+  contact 
+  service
+
+2)create navbar component
+   
+   create ul list
+    
+    home 
+    about 
+    contact 
+    service
+
+3)mount the component in app.jsx
+
+4)install router
+  npm i react-router-dom
+
+5)create route component
+
+  import all 4 component
+   import {createBrowserRouter} from "react-router-dom"
+
+   const router =crateBrowserRouter ([
+    {   //everything will be array of object
+        path: "/",
+        element:<App/>   //if we have any children we have to use children 
+        children:[        //children
+          {
+            path: "about"
+            element:<About/>    // component name
+          },
+          {
+            path: "contact"
+            element:<Contact/>
+          }
+
+        ]
+        {
+       path:"footer"        parent
+       element:<footer>
+  }
+    }
+
+
+   ])
+
+  6 )export
+   export const router =crateBrowserRouter 
+
+  7)we will use Link tag
+    <li><Link to="home">home</Link><li>
+    <li><Link to="about">about</Link><li>
+    <li><Link to="contact">contact</Link><li>
+    <li><Link to="services">services</Link><li>
+
+
+8)
+  <RouterProvider router{router}>
+  <app/>
+  </RouterProvider>
+    
+ 9)Outlet
+   to display the children component we need this outlet
+    <Outlet/> in app.js
+    also use in parent component
+  {
+    path:"footer"
+    element:<footer/>
+  }
