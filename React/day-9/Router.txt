@@ -34,7 +34,7 @@ RouterProvider
         children:[        //children
           {
             path: "about"
-            element:<About/>    // component name
+            element:<About/>    //will pass the  component name
           },
           {
             path: "contact"

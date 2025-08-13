@@ -1,0 +1,31 @@
+class component
+---------------
+phases-mounting - creating a component and adding to root (header.jsx to app.jsx) adding to dom
+          methods
+          --------
+             constructor method- intialize state and props
+             static getDeriverdStateFromProps-use props & check conditon in it  to update the state
+             render-contain -return of jsx
+             componentDidMount-execute only once (useffect(()=> ,[])->useeffect with empty dependency)
+
+       updating - state change-updation of component
+       return state or null
+              5 methods
+              ----------
+              getDerivedStateFromProps-if state changes-it updated
+              shouldComponentUpdate-return true or false
+              render- contain -return of jsx
+              get snapshotBeforeUpdate- use previous value-return snapshot
+              componentDidupdate-(useffect(()=> ,[value])->useeffect with render till value)
+
+       unmounting -removing from dom -while clicking to about,jsx while we are in homepage.jsx, (the homepage will be unmounted)
+              1 method
+              --------
+              componentWillUnmount-(useffect(()=> ,[])->useeffect with clear interval)
+
+
+       error boundery - 
+             2 method
+             --------
+             getDerivedStateFromError-based on error update the state
+             componentDidCatch- print the error
