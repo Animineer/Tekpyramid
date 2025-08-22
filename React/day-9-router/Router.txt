@@ -67,7 +67,7 @@ RouterProvider
   </RouterProvider>
     
  9)Outlet
-   to display the children component we need this outlet
+   to display the children component content we need this outlet
     <Outlet/> in app.js
     also use in parent component
   {

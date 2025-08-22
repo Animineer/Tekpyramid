@@ -1,0 +1,46 @@
+lazyloading -optimize technique-step by step render
+-------------
+
+     mount in one component
+     10 component
+     10 nested component in each
+
+     time take to render is high
+
+we want only load the vw and vh initial immediately
+
+let lazy= lazy(()=>import ("./component/lazy/lazy))   - in import
+it return a promise- we can use .then and catch
+
+convert module from named to default component- because not understand
+
+
+import {lazy, Suspense} from "react"
+<Suspense fallback={<div>loading........</div>} -initial time 
+
+
+import { lazy, Suspense } from 'react'
+import MyApp from './Components/MyApp/MyApp'
+import NavBar from './Components/NavBar/NavBar'
+
+let Crazy=lazy(()=>import ('./Components/Lazy/Lazy'))
+  //lazy- func    // callback - retun as imported as module 
+  // import () -return promise
+  //lazy inbuit handle the promise
+function App() {
+
+  return (
+    <>
+   {/* <MyApp />    */}
+   <NavBar/>
+
+
+   <Suspense fallback={<div>LOADING...</div>}>  // wrap the componet with suspence
+   //suspense -display till the crazy reload - till the promise suscess
+   <Crazy/>
+   </Suspense>
+    </>
+  )
+}
+
+export default App
