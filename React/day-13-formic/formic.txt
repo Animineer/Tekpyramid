@@ -1,0 +1,91 @@
+form
+--------
+ 
+1)create formicyup.jsx
+2)mount that component
+
+3)without formic- we need state to store value, onchange
+
+4)<form>
+    username-<label> 
+             <input type="text" name =" " />
+
+    password -<label> 
+             <input type="text" name =" " />
+
+             <button>
+
+5)use the use formic before return 
+
+6) import useFormik
+
+  const formikdetails= useFormik({
+    initialValues,
+    validationschema,
+    onsubmit
+  })
+
+
+6)give initialstate
+  
+   const initialValues={
+    username="",
+    password=""
+   }
+
+
+7)for validation
+   
+   1)import * as Yup form "yup" (instead of using string , mixed, number)
+   2)import {string,mixed, number} from "yup"
+
+   validate 
+
+      const validationschema=Yup.object({
+        username: Yup.string().required("username is required ),   -for customise way indication
+        password : Yup.string().required(" ").min(4,"password must contain 4 char").max(8,"")
+      })
+
+
+8) 
+
+   onsubmit :(values)=>{   -values is predefined
+            
+   }
+
+9)onclick= can be given to button or on form (onsubmit) -if we have multiple button ->give submit to respective button
+
+      <form onsubmit={formikdetails.handleSubmit}>     - formic name , handleSubmit will target onclick internallly
+
+
+10) to link with formic
+     
+     name="username" 
+     value={formikdetails.values.username}
+
+    <input type ="text " name="username" value={formikdetails.values.username}/>
+     //name -show the value in url
+
+
+
+11)
+    onchange -> onchange={formikdetails.handlechange}
+     <input type ="text " name="username" value={formikdetails.values.username}  onchange -> onchange={formikdetails.handlechange}/>
+
+
+12)
+   onsubmit :(values)=>{   -values is predefined
+   console.log(values)      // we get username:swathi , password:122 after clicking login         
+   }
+
+
+14)error - code after input 
+  
+  inhtml - use carlibreaces {}
+  {
+    formikdetails.errors.username  && (
+        <p>{formikdetails.error.username}</p>
+    )
+  }
+  
+  style <p style={{color:"red"}}>
