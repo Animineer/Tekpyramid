@@ -1,5 +1,8 @@
 form
 --------
+
+controlled-use state
+uncontrolled - use ref
  
 1)create formicyup.jsx
 2)mount that component

@@ -61,12 +61,20 @@ RouterProvider
     <li><Link to="services">services</Link><li>
 
 
-8)
+8)router provider
+
+   import { RouterProvider } from 'react-router-dom'
+   
+   import { router } from './routes/Routes.jsx';
+  
   <RouterProvider router{router}>
   <app/>
   </RouterProvider>
     
  9)Outlet
+
+   import { Outlet } from 'react-router-dom'
+
    to display the children component content we need this outlet
     <Outlet/> in app.js
     also use in parent component

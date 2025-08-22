@@ -1,0 +1,89 @@
+redux
+-------
+    -state management tool
+    -external library
+
+    -useState-manage state easily
+    -useReducer-manage multiple state
+     -useContext-
+
+for complicated state management
+
+redux tool kit
+---------------
+         -manage our state globally in our project
+ 
+         we have muliple component
+                 centralised strore
+         use those state in multiple component
+
+
+         slice-state action useReducer - each and every functionality we will create slice -eg:todo, counter
+         
+         todoslice.js
+         1)creating slice
+           
+           createSlice({
+            name=""
+            initialstate:[]
+            reducer:{
+                action:->write the functionality
+                action 1:(state,action )=>{}
+            }
+           })
+           
+         2)store in a variable
+
+           const todoslice=createSlice
+         
+         3)export actions
+           export const {action1, action2 }=todoslice.action
+
+         4)export reducer
+           export default todoslice.reducer
+
+
+         store - muliple slices
+
+2)configure the store
+
+      1)import todoreducer from "/todoslice.js"
+
+      2)    configurstroe({
+                reducer:{
+                     //define the reducer
+                }
+            })
+         
+
+ createSlice({
+            name="todo"
+           
+            }
+
+           
+        3) take the key value from slice
+            configurstroe({
+                reducer:{
+                   todo:todoreducer  
+                }
+            })
+
+
+3)introduce the store to application 
+
+        1)we will use the provider
+
+        <provider>
+
+        </provider>
+
+        2)it take one props store ={store}
+
+         <provider {store} >
+
+4)using 
+  useSelector- to read the values of state
+  useDispatch - update the state
+
+
