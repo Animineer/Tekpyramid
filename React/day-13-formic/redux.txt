@@ -1,4 +1,4 @@
-redux
+redux-install 2 libraries  npm i @reduxjs/toolkit , react-redux
 -------
     -state management tool
     -external library
@@ -65,7 +65,7 @@ redux tool kit
         3) take the key value from slice
             configurstroe({
                 reducer:{
-                   todo:todoreducer  
+                   todo:todoreducer     //todoreducer is variable
                 }
             })
 
@@ -81,6 +81,8 @@ redux tool kit
         2)it take one props store ={store}
 
          <provider {store} >
+
+         import {provider} from "react-redux"
 
 4)using 
   useSelector- to read the values of state
