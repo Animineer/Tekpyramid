@@ -40,7 +40,7 @@ redux tool kit
            export const {action1, action2 }=todoslice.action
 
          4)export reducer
-           export default todoslice.reducer
+           export default todoslice.reducer               //imported as todoreducer name
 
 
          store - muliple slices
