@@ -1,0 +1,112 @@
+What is Memoization?
+“Memoization is an optimization technique used storing the results of expensive function calls and returning the cached result when the same inputs occur again.
+
+
+1.React.memo():-
+
+React.memo is a higher-order component (HOC) that helps prevent unnecessary re-renders. It does a shallow comparison of the props. If the props haven't changed, the component won't re-render.
+
+Note:
+
+1. React.memo does a shallow comparison of props. That means it checks primitive values like strings, numbers, booleans by value. But for 	objects and functions? It checks by reference.
+2. "When props are passed by reference—such as objects, arrays, or functions—a new reference is created on every render, so even if their           	content hasn’t changed, React.memo will still trigger a re-render because it only does a shallow comparison."
+Shallow Comparison:- memo compares props using ===. This works well for primitive values (numbers, strings, booleans).
+3.  React.memo ONLY blocks re-render if the props change — not state. But Counter has state changing → re-render is inevitable.
+
+🤯 What’s the issue?
+Even though {obj.name} never changes, the object itself ({ name: 'reactjs' }) is recreated every render.
+
+So React.memo goes:
+“Uhh… new object again? I guess I should re-render.”
+
+🔥 That’s because JavaScript compares object references, not their values.
+Every render = new memory address for obj.
+
+useMemo is useful with React.memo — to make sure you're not passing new references every time, like for objects or functions, which would break shallow comparison.
+
+2.useMemo (FOR OBJECTS or COMPUTED VALUES):-
+
+useMemo is a React Hook that memoizes a computed value, so the value is only recalculated when its dependencies change. It's used to optimize performance, especially when doing expensive calculations or passing objects/functions as props.
+
+syntax-
+   **const memoizedValue = useMemo(() => {**
+
+  		**// your calculation here**
+
+ 		 **return something;**
+
+		**}, \[dependencies]);**
+
+
+eg-  let obj=useMemo(()=>{return {value:'reactjs'}},[])
+
+
+2.useCallback (FOR FUNCTIONS / EVENT HANDLERS)
+
+We use useCallback to memoize a function, especially when that function is passed to child components—so it doesn't get recreated every  render unless needed.
+
+useCallback caches a function between renders so React doesn’t treat it as a new one every time
+
+useCallback memoizes functions, preventing new function instances from being created unnecessarily.
+
+Syntax:-
+
+const memoizedCallback = useCallback(() => {
+  // your function logic
+}, [dependencies]);
+
+
+eg:-
+ const handleClick = useCallback(() => {
+        console.log("Child button clicked");
+        setCount(prev => prev + 1);
+    }, []);
+
+
+
+
+
+
+
+
+
+| Feature                 | `useMemo` 💡                                      | `useCallback` 🧠                                                    |
+| ----------------------- | ------------------------------------------------- | ------------------------------------------------------------------- |
+| **Purpose**             | Memoizes a **value**                              | Memoizes a **function**                                             |
+| **Returns**             | The **cached result** of a computation            | The **same function reference**                                     |
+| **Used for**            | Avoiding **expensive recalculations**             | Avoiding **unnecessary re-renders** when passing functions as props |
+| **Syntax**              | `const value = useMemo(() => compute(), [deps])`  | `const fn = useCallback(() => doStuff(), [deps])`                   |
+| **Prevent re-renders?** | Not directly — only helps if value doesn’t change | Yes — helps `React.memo` avoid child re-renders                     |
+| **Internally**          | Just a `useCallback` that returns a **value**     | Just a `useMemo` that returns a **function**                        |
+
+
+
+| Hook          | You Use It For | Returns    | Recalculated When   |
+| ------------- | -------------- | ---------- | ------------------- |
+| `useCallback` | Functions      | A function | Dependencies change |
+| `useMemo`     | Values         | A value    | Dependencies change |
+
+
+
+
+
+
+🔥 Question :
+“What’s the difference between useMemo(() => fn, []) and useCallback(fn, [])?”
+
+Answer:
+“useCallback(fn, deps) is the same as useMemo(() => fn, deps) — but useCallback is made just for functions. Makes code cleaner and clearer.”
+“If I need a result, I use useMemo.
+If I need a stable function reference, I use useCallback.
+They both memoize — the difference is what they return.”
+
+
+
+| Version                        | Memoized? | Re-renders Child?   | Safe Update?     |
+| ------------------------------ | --------- | ------------------- | ---------------- |
+| `useCallback + prev => prev+1` | ✅         | ❌ (with React.memo) | ✅ (no race risk) |
+| `() => setCount(count + 1)`    | ❌         | ✅ (every time)      | ❌ (can glitch)   |
+
+
+
+https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221_-_yhezUG0j_2AqKDlN7c-odXutQY8UX%22%5D,%22action%22:%22open%22,%22userId%22:%22105924758087285294644%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing
