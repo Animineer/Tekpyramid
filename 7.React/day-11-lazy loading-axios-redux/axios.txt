@@ -1,0 +1,13 @@
+axios - library  
+used instead of  fetch
+
+
+1) to install the library
+npm i axios
+
+2)let response= axisos(url)
+  return promise with json format- impicitly
+  
+3)use inside async function 
+   
+   

@@ -1,0 +1,27 @@
+.section{
+    margin-top: 100px;
+}
+
+.section h2{
+    margin-bottom: 40px;
+}
+
+.demos span{
+   padding: 15px 20px;
+   text-align: center;
+   line-height: 25px;
+}
+
+.demos{
+    width: 270px;
+    display: flex;
+    border: 1px solid rgba(128, 128, 128, 0.581);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.section > div{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 280px 280px 280px 280px;
+}

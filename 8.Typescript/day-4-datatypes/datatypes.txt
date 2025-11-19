@@ -1,0 +1,33 @@
+primitive
+------------
+number 
+string 
+bigint
+boolean
+undefined
+null
+symbol
+
+
+non primitive
+--------------
+array
+tuple
+object
+
+
+advanced
+------------
+enum
+union
+intersection - if we want to combine two are more object and console together
+interface
+type
+literal- fixed length of value -  "pass "| "fail"
+
+special
+--------
+any 
+unknown
+void -used inside fn -used for event handling, console,callback
+never -used inside fn- used for error handling

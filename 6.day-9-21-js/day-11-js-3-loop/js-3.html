@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for in
+        //for of -not applied on object
+
+        //for in 
+        obj=[5,2]
+        for (var i in obj)
+    {
+        console.log(i) // pring index
+        console.log(obj[i]) //print value
+
+    }
+
+    for (var i of obj)
+    {
+        console.log(i);
+    }
+
+
+
+
+    //debugger
+    //anonymous-global execution context
+    
+   
+    var num1=3;
+    var num2=5;
+
+    function greet()
+    {
+        console.log("hello")
+    }
+    greet()
+    console.log(num1+num2)
+    
+    //hoisting
+   // var -will be undefine-global scope
+   // let , const-block scope- declaration and intialization are in
+                  // -temporarily dead zone-get refrence error
+    //also possible for named function-since we can call anywhere
+
+
+        </script>
+</body>
+</html>

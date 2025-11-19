@@ -1,0 +1,145 @@
+context 
+------------
+through prop - if we using nested component 
+             - we will pass the data also to  each level of component where we wont use
+             
+useConstext
+-------------
+ 
+      1)create context
+      2)provide the context
+      3)use context
+
+1)createContext() using this method                         //if we wont have any value it will take the initial value
+  let context_name = createContext() define some context_name
+
+2)<context_name.Provider>
+  <parent/>
+  <context_name.Provider>
+
+3)provider provide prop that is value
+
+   <context_name.Provider value={}>
+   <parent/>
+   <context_name.Provider>
+
+4)useContext
+
+5)useContext(context_name) -pass the context 
+
+6)let data=useContext(context_name)
+
+parent component
+-------------------
+import React from 'react'
+import ChildContext from "./ChildContext"
+function ParentContext() {
+  return (
+    <div>
+        <p>parent context</p>
+
+    {/* <ChildContext></ChildContext> */}
+    <ChildContext/>
+    </div>
+  )
+}
+
+export default ParentContext
+
+
+child component
+-----------------
+
+import React from 'react'
+import GcContext from './GcContext'
+function ChildContext() {
+  return (
+    <div>
+        <h1>ChildContext</h1>
+        
+
+       <GcContext/>
+    </div>
+  )
+}
+
+export default ChildContext
+
+grand child
+------------
+import React, { useState } from 'react'
+import { useContext } from 'react'
+import { myContext } from './ContextFile'
+const GcContext = () => {
+    
+
+    const[color,setcolor]=useState("red")
+
+    let mydata=useContext(myContext)
+
+    console.log(mydata) //check- to check whether we are getting some data or not
+    function changeColor()
+    {
+
+        setcolor(color=="red"?"blue":"red")
+    }
+  return (
+    <div>
+        <h1>GcContext</h1>
+        {/* we will use state  */}
+        <p style={{color:color}}>{mydata.data}</p> 
+        <button onClick={changeColor}>change color</button>
+
+    </div>
+  )
+}
+
+contextFile
+------------
+import React,{createContext} from 'react'
+export let myContext= createContext({data : "value from default"}) //named export 
+  //have to use carlibraces while importing
+function ContextFile() {
+
+
+  return (
+    <div>
+        
+        <h1>creating component</h1>
+
+    </div>
+  )
+}
+
+export default ContextFile
+
+app
+-----
+import './App.css'
+
+
+//context
+import {myContext} from "./component/context/ContextFile"
+import ParentContext from './component/context/ParentContext'
+
+
+
+function App() {
+ return(
+    <>
+    <myContext.Provider value={{data:"hi i am working fine now "}}>
+        <ParentContext/>
+    </myContext.Provider>
+
+   </>
+    
+ )
+}
+
+export default App
+
+
+-------------------------------------------------
+use memo  -memorise value- it wont rerender again
+----------
+use callback -useCallback(()=>console.log []) memorise function - it wont rerender again

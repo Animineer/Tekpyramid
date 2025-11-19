@@ -1,0 +1,23 @@
+useReducer-
+
+const [state,dispatch]=useReducer(reducer,initialstate, init)
+    state-current state
+
+reducer(state, action)=> for differect action return differen state
+
+function init(a){
+    return a+5;  //initial value
+}
+
+hook- contain some logic
+custom hook
+-------------
+?-null check
+       create our own hook whith the help of other available predefined hooks
+       
+       create component -Usefetch.jsx
+
+       create useState , useEffect
+
+
+   

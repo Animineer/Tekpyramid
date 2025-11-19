@@ -1,0 +1,109 @@
+1. Write a program to check if a number is even or odd. 
+
+2. Write a program to find the greatest of 3 numbers using if...else if...else. 
+
+3. Create a pattern like this using for loop: 
+
+* 
+
+** 
+
+*** 
+
+**** 
+
+4. Print the reverse of a string using a loop. 
+
+For example: 
+Input: "hello" → Output: "olleh" 
+
+ 
+
+5. Write a program to Check whether the number is prime or not? 
+
+6. Write a function to generate the following pattern: 
+
+1 
+
+1 2 
+
+1 2 3 
+
+1 2 3 4 
+
+7. Write a program that checks whether a string is a palindrome (same forward and backward), without using built-in reverse methods. 
+
+8. Generate Fibonacci series up to N numbers using a while loop. 
+
+9. Write a function that takes a number and returns: 
+
+"Fizz" if divisible by 3 
+
+"Buzz" if divisible by 5 
+
+"FizzBuzz" if divisible by both 3 and 5 
+
+The number itself otherwise 
+
+10. Write a function to count how many times each character appears in a string. 
+
+Input: hello  
+
+Output: { h: 1, e: 1, l: 2, o: 1 } 
+
+ 
+
+11. You have an array of numbers. Return a new array with only the unique elements (no duplicates) using loops and conditionals only. 
+
+12. Create a pyramid pattern of stars for a given number of rows: 
+
+     * 
+
+    * * 
+
+   * * * 
+
+  * * * * 
+
+13. Write a JavaScript program to find factorial of a number using a for loop. 
+
+14. Write a JavaScript program that checks if two strings are anagrams (e.g., "listen" and "silent"). 
+
+15. Reverse the words in a sentence, not characters. 
+
+// Input: "hello world from js" 
+
+// Output: "js from world hello" 
+
+16. Write a js program to find the second highest number in an array. 
+
+17. Find Missing Number in a Sequence of numbers from 1 to N 
+
+18. Write a JS program to Check if the given number is Armstrong Number or not 
+
+19. Sort an Array Without Built-in sort() 
+
+20. Find the maximum difference between two numbers in an array in JavaScript? 
+21. Find the largest number in an array in JavaScript.
+22. How Remove the first element from an array in JavaScript?
+23. Write a Program to find a sum of an array?
+24.Write a Program to merge two arrays in JavaScript?
+25. Find the Intersection of Two Arrays in JavaScript?	
+26. Find the Union of Two Arrays in JavaScript?
+27. Write a Program to find the minimum value in an array in JavaScript?
+28. Check if a String Contains Another String in JavaScript?
+29. Find the First Non-Repeated Character in a String in JavaScript?
+30. Find the Longest Word in a String in JavaScript?
+31. Capitalize the First Letter of Each Word in a Sentence in JavaScript?
+32. Convert an Array of Strings to Uppercase in JavaScript?
+33. Get the last element of an array in JavaScript?
+34. Calculate the factorial of a number using recursion in JavaScript?
+35. Count Vowels in a String in JavaScript?
+36. Get Unique Characters from a String in JavaScript?
+37. Find largest number and second largest number from an array?
+38. Flatten an array without using in build flat method?
+ 
+
+ 
+
+ 

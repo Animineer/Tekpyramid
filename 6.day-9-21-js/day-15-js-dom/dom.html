@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM</title>
+</head>
+<body>
+   DOM- all the element are in tree like structure
+   node-
+        Document node
+        element
+        attribute
+        text
+        comment 
+
+   Document is entry- since we use document.getElementById
+
+   <ul id="list">
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+    <li>four</li>
+    <li>five</li>
+   </ul>
+
+
+   <ul id="list" class="container">
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+    <li>four</li>
+    <li>five</li>
+   </ul>
+   <script>
+
+//    accessing the element
+   let data=document.getElementById("list")
+   document.getElementsByClassName
+   document.getElementsByTagName
+
+   document.querySelector()
+   document.querySelectorAll("#list")   //.container or li
+  
+  
+//    assigning 
+   data.innerHTML="<li>list 1</li>"
+   data.innterText="list 1"
+   
+
+//    selcting the child
+    console.log(document.getElementById("container").firstElementChild)  
+    //elementchild -return the //child return - spaces(text)
+
+    console.log(document.getElementsByClassName("container").firstElementChild[0])
+    
+    
+    // selecting parent
+    console.log(document.getElementById("box1").parentElement)
+
+    //  selecting sibling
+    console.log(document.getElementById("box1").previousElementSibling) //only next and previous
+    
+    // style
+    data.style.backgroundColor="red"
+
+
+    // attributes
+    data.attribute //get all attribute   -
+    data.getAttribute("id") // lists
+    data.setAttribute("style", "background-color:blue")  
+    data.removeAttribute("style")                            
+
+   </script>
+
+</body>
+</html>

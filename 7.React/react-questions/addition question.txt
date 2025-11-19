@@ -1,0 +1,12 @@
+1.What is state uplifting in React?
+2.What is the use of key prop ?
+3.How to optimize performance in React applications?
+4. How do you handle forms in React?
+5. How do you handle validation in React forms?
+6. Difference between class component lifecycle methods and hooks.
+7.what is tree shaking?
+8. What is React StrictMode?
+9.What is middleware in Redux? Diff between Redux Thunk and Saga?
+10. Explain RTK Query?
+11. How does React handle error boundaries?
+12. What is batching ? Why does React batch state updates?

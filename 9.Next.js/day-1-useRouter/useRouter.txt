@@ -1,0 +1,65 @@
+next js 15+    framework of react js
+  
+  features
+  ->server side rendering- 
+  ->static site generation -Build pages at build time for super-fast loading.
+  ->improve seo 
+  ->js or ts ->meta data (information about project)
+  ->while creating th project we will get all libraries
+  ->file based ROUTING
+  ->layout.tsx (or )jsx (index.html to main.js to app.js)
+  ->folder-contain page become routing -same as /
+
+
+create 
+npx create-next-app@latest . ->y 
+choose the following
+->yes-typescript 
+->Eslint-yes
+->code inside src, customise the import alias ->no , other ->yes (talwind, approuter, turbopack)
+
+app->main folder
+
+    ->layout.tsx->metadata 
+    ->page.tsx-> give home route
+
+npm run dev to run the server
+
+app-> create folder -about
+   ->create page.tsx in that
+
+
+rfce-> change the component name as per requirement 
+
+in layout.tsx
+<div>
+<link href={"/home"}>Home</link>
+<link href={"/about"}>About</link>
+{children}-> to show the content
+</div>
+
+
+use navigate in react 
+-------------------------
+const nav=useNavigate();
+const handleclick=()=>
+{
+   nav("/")    ="-1" for previous path
+}
+
+return(
+  <button onclick={handleclick}> about </button>
+)
+
+
+in next js
+-----------
+useRouter()
+
+
+router.push("/about")              ->for providing the path respective page
+       forward
+       back
+
+
+

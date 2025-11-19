@@ -1,0 +1,86 @@
+Git
+
+------------------------------------------------------
+
+working directory (where we write the code)= add -> 
+     
+staging area      =commit ->
+
+local repo  (our pc)  = push->
+
+remote area (cloud)=
+
+other - to retrive from cloud= pull ->
+
+-----------------------------------------------------------
+
+git config --global user.name "pankaj"
+git config --global user.email "pankajkumar3082011@gmail.com"
+
+-----------------------------------------------------------
+
+
+we have branch -default (master)
+change name -> git config --global init.defaultBranch main
+
+--------------------------------------------------------------------------------
+
+
+
+git init - if error use git bash in + terminal
+git status - check status- we will be on master branch - our last commit 
+
+git add . / for particular file -> git add html/index.html   folder/file name ->to add file
+
+git rm --cached html/index.html  (to remove file)
+
+git commit -m "Initial commit"
+
+------------------------------------------------------------------------------------------
+git branch-to check the list of branch
+2- ways -> to create branch 
+git switch -c featureBranch (it will create and switch to new branch in the name of feature branch)
+git branch branch1 (will create new banch in the name of banch 1)
+
+git switch master-switch to maseter branch
+git branch -m master main -> master to main-rename
+
+
+<-------------------------------- day-8 ---------------------------------------->
+
+ git log-to check all git commit stages
+ .gitignore-is a file where we can mention -we dont want to push (like node modules, password)in file we can  mention (.txt)
+
+--------------------------------------------------------------------------------------------
+ merge-two different branches but, working on same file
+ git merge featurebranch
+ if we have 3 line of code and 3rd line mismatch -get conflicts (some error in merge)
+ conflict
+ we have to resolve the conflict
+-will get some option like
+-accept incoming
+-accept both(first incoming),accept both(first current),
+-accept current
+
+-------------------------------------------------------------------------------------------
+will get 1 folder
+git clone url
+we have 6 brahch- 4 for devloper
+1main-where tl will push
+devlop branch - where all devloper will push  finally in common branch
+for each devloper have severate branch
+4 devloper - has their own branch - for different work like- header, footer, main
+---------------------------------------------------------------------------------------------
+
+
+
+                                                              
+
+
+for remote repository
+git remote add origin https://github.com/yourusername/flight-multiplayer-game.git-   http link
+git push -u origin main
+
+
+git pull origin main - if we want to pull latest comit
+git clone https://github.com/yourusername/flight-multiplayer-game.git- will use initially

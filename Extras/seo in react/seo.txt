@@ -1,0 +1,20 @@
+1.install the library
+npm install react-helmet-async
+
+
+2.provider
+import { HelmetProvider } from "react-helmet-async";
+
+<HelmetProvider>
+    <App />
+  </HelmetProvider>
+
+
+3.use
+import { Helmet } from "react-helmet-async";
+
+<Helmet>
+        <title>{product.title} | MyShop</title>
+        <meta name="description" content={product.description} />
+        <meta property="og:image" content={product.thumbnail} />
+</Helmet>

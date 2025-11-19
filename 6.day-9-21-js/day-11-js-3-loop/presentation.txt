@@ -1,0 +1,66 @@
+datatype
+primitive and non primitive
+
+primitive
+-----------
+string -"" '' ``
+number-int, float
+boolean-t,f
+bigint-16 digit 2^53-1
+undefine-no intialization -type is undefine
+null- object
+symbol-can give unique value -id  
+        var id=symbol('id') 
+        let obj={
+            full name:"priya";
+            [id]:1
+        }
+
+non primitive
+-------------
+object
+function
+array
+
+array
+------
+literal way   let arr=["apple" , 1]
+constructor way let arr= new array ("mango", 2)
+
+
+array methods
+-------------
+length()
+at()- arr.at(0) 
+push()-add end
+pop()-remove 
+shift()
+unshift()
+concat()->a.concat(b)
+tostring()
+join()->,
+flat()->
+splice()
+slice()
+sort()
+reverse()
+
+
+num+num=num
+"01"+1="011"
+"01"*5=10 other than + it will consider as number
+"str"+num=nan -not a numbver
+[]+[]=' '- impicitlity take tostring method -both array will be empty string 
+
+
+
+" ",[],0-false
+{},1,2..n, "hi" -true
+typeof 2+1 =number1   ->type of 2 o/p is number 
+[1,2,3]+[1,2,3] =[1,2,31,2,3]
+
+"apple" < "banana"  =true compare first letter a < b
+
+scope-global, function , block,lexical-outer fn have inner fn
+
+operators

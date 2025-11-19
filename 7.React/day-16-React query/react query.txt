@@ -1,0 +1,140 @@
+npm install @tanstack/react-query@latest
+queryclient
+usequery-fetch
+mutation-crud
+
+
+React query-tanstack query also known also- server side state mamagement
+share the data between multiple component
+chaching-handle internally (storing data)
+
+
+
+queryclient provider-wraps your app so all components can access it.
+queryclient         -central cache/store for server data.(store the cache data)
+useQuery            -fetch and read server data.
+QueryMutation       -create/update/delete server data.
+useQueryClient      -access QueryClient to invalidate or update queries manually.
+
+
+useQuery({
+   queryKey: ['users'],       // Unique identifier for the query
+  queryFn: fetchUsers,       // Function to fetch data from the server
+  staleTime: 1000 * 60,      // (store for 1 min and (compare if new data)refetching)Time in ms before data becomes "stale" (here 1 minute)
+  cacheTime: 1000 * 60 * 5,  // (in 1000 if we are using 500 remaining 500 will got to garbage collection)Time in ms before unused cached data is garbage collected (here 5 minutes)
+})
+
+use mutation({
+    mutationFn: yourFunction,       // Function to perform mutation (POST, PUT, DELETE)
+  onSuccess: (data) => {},        // Called when mutation succeeds
+  onError: (error) => {},         // Called when mutation fails
+  onSettled: (data, error) => {}, // Called whether success or error
+})
+
+
+invalidateQuery
+
+--------------------------------------------------------------------------------------------------------------------
+React query- caching api(without using useffect and usestate)
+-----------------------
+caching
+server side state management-inbuilt states
+ 
+queryclient- initialize in app (where we use provider) -
+	     creates a global cache manager.
+newqueryclient
+queryclientprovider-client
+ 
+ 
+hooks
+----------
+usequery-each time get data from server-for fetching(GET).
+usemutation-for modifying data (POST/PUT/DELETE).
+ 
+usequeryclient-to manually access & control the cache.
+ 
+ 
+1.usequeryclient
+2.usequery
+   querykey:[" products"] -like separating category also we can give id to select respective product
+   queryfn:fetchproducts (crud operations functions)
+   stale time:cache the data for respective time
+   cache: unfetched data will be send to garbage collection after respective time
+ 
+-------------------------------------------
+usemutation-accodding to fn - call the api
+mutationfn
+onsuceess
+setquerydata-Manually update cache
+get-Read cache
+invalidate-Mark stale → refetch (used for delete)
+ 
+✅ If interviewer asks: “What is React Query?”
+ 
+Your answer:
+"React Query is a library used for server-side state management.
+It handles API caching, refetching, background updates, loading/error states, and removes the need for useEffect + useState for fetching."
+ 
+✅ If interviewer asks: “Why QueryClient & QueryClientProvider?”
+ 
+Your answer:
+"QueryClient is a global cache manager.
+QueryClientProvider makes that cache available to the entire app.
+All hooks like useQuery and useMutation depend on this provider."
+ 
+✅ If interviewer asks: “What is useQuery?”
+ 
+Your answer:
+"useQuery is used for GET requests. It fetches data, caches it, handles loading/error states, and refetches automatically."
+ 
+✅ If interviewer asks: “What is useMutation?”
+ 
+Your answer:
+"useMutation is used for POST, PUT, DELETE. It does not run automatically — it runs manually when we call mutate()."
+ 
+✅ If interviewer asks: “What is useQueryClient?”
+ 
+Your answer:
+"useQueryClient gives access to the global cache. We use it to read cache, update cache, or invalidate queries."
+ 
+✅ If interviewer asks: “What is setQueryData?”
+ 
+Your answer:
+"It updates the cached data manually without calling the API. Used for optimistic updates."
+ 
+✅ If interviewer asks: “What is getQueryData?”
+ 
+Your answer:
+"It reads existing cached data. Useful to check if data is available before refetching."
+ 
+✅ If interviewer asks: “What is invalidateQueries?”
+ 
+Your answer:
+"It marks a query as stale. React Query will refetch fresh data from the server.
+Used after delete/update operations."
+ 
+🎯 3. How to answer in a real-life project way (high impact)
+ 
+Interviewer expects this:
+ 
+👉 Show you know the flow:
+Fetch → Mutate → Update cache → Invalidate → Refetch
+ 
+👉 Show you used it in real projects:
+"I used React Query in my project for product management.
+When I deleted a product, I used invalidateQueries(['products'])
+to trigger a refetch so the UI updates with fresh data from the server."
+ 
+That’s the answer they LOVE.
+ 
+🎤 4. Final Golden Answer Format (copy this in interview)
+ 
+Here is a single, perfect summary:
+ 
+“React Query helps me manage server state effectively.
+I initialize QueryClient globally and wrap the app with QueryClientProvider.
+For fetching, I use useQuery with a queryKey and queryFn.
+For POST/PUT/DELETE, I use useMutation.
+After a mutation, I use the queryClient to either setQueryData for instant UI updates or invalidateQueries to refetch fresh data.
+I also use getQueryData to read existing cached values.
+This avoids using useEffect and gives automatic caching, refetching, and better performance.”

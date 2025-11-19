@@ -1,0 +1,47 @@
+1)install to libraries formic and yup
+    formic-state event(like:username.username), onchange event
+    yup-validation
+
+    npm i formic yup-
+
+2)useFormik- provided by formic library
+ 
+    const formikdetails=useFormik(
+        {initalstate,
+        validationschema,-how to take character, number , letter
+        onsubmit
+         })
+
+3)
+   const intitalstate={
+    username:"",
+    password:""
+}
+
+4)pass the value using formik
+<input type="text" name="username" value{formikdetails.values.username}/>
+
+5)provide onchange event
+  onchange={formikdetails.handlechange}
+
+  <input type="text" name="username" value{formikdetails.values.username}  onchange={formikdetails.handlechange}/>
+
+6)validation schema- using yup
+    
+    import * as Yup from "yup"
+
+
+   const validationschema=Yup.obj({
+        username:Yup.string().required("username is required"),
+        password:Yup.string().required("password is required").min(8).max(10)
+
+    })
+
+7)define onsubmit
+  
+  give the username values
+  
+  const formSubmit=()=>{
+
+  }
+

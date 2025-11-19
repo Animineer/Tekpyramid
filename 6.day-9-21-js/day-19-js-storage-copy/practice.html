@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 4. Code to transform matrix direction
+//       [2,3]
+//       [7,5] to
+
+//       [3,5]  
+//       [7,2]
+
+
+ arr1=[2,3]     //3,5   //arr1. L  arr2.L
+ arr2=[7,5]     //7,2   //arr2.1   arr1.1
+
+
+          arrs=[arr1[1],arr2[1]]
+           arr2l=[arr2[0],arr1[0]]
+           
+           console.log(arrs,arr2l)
+
+
+        // Write a program to solve two sum problem (Input: [2,7,12,1,2], target:9; Output:[0,1]; Input:[3,4,5,2], target:6; Output:[1,3])
+
+arr1=[2,7,12,1,2]
+target=14
+output=[]
+
+for(i=0;i<arr1.length-1;i++)
+{
+    for (j=i+1; j<arr1.length;j++)
+    {
+        if(target==arr1[i]+arr1[j])
+        {
+            console.log(output=[i,j])
+        }
+    }
+    
+}
+
+// Say we have an object obj={one:”abc”, 
+//                           two:”bcd”,
+//                          three:{threeOne:”cde”},
+//                           four:[“def”,”fgh”]},
+
+// How can we convert it to 
+// obj={one-add:”abc”,
+//      two-add:”bcd”,
+//      three-add:{threeOne-add:”cde”},
+//      four-add:[“def”,”fgh”]}
+
+console.log(students) //give object 
+console.log(students[0]) //choose 1st object
+console.log(students[0].name) //print the object key value
+     
+function convert(obj)
+{
+    for(var i in obj)
+    {  
+       j= i.toString().concat("-add")
+        console.log(j,":",obj[i])
+    }
+}
+convert({one:"abc",two:"bcd"} ) 
+
+// 1.Understand the requirement and write a code to execute the output. For all students who scored less than 60, add 20 grace marks to their scores. After applying the grace marks, calculate the total sum of marks for all students whose final score is greater than 60. 
+// <60 +20
+// total 
+// >60 student name
+
+// const students = [ { 
+//     name: "Piyush", 
+//     rollNumber: 31, 
+//     marks: 80 },
+
+// { name: "Jenny", 
+//   rollNumber: 15, 
+//   marks: 69 }, 
+
+// { name: "Kaushal",
+//   rollNumber: 16, 
+//   marks: 35 },
+
+// { name: "Dilpreet",
+//   rollNumber: 7,
+//   marks: 55 }, ];
+
+function marks(obj)
+{
+     console.log("\nbefore adding grace mark \n")
+     sum=0
+   for (i=0;i<obj.length;i++)
+   {
+   
+    console.log( obj[i].name+":"+obj[i].marks)
+       if(obj[i].marks<60)
+       {
+           obj[i].marks+=20
+       }
+    if(obj[i].marks>60){
+        sum+=obj[i].marks
+    }
+   }console.log("\n after adding '20' grace mark")
+   for (let twen in obj)
+   {
+   console.log(obj[twen].name+":"+obj[twen].marks)
+   }
+   console.log("\n student scored more than 60 are")
+   for (let twe in obj)
+   {if(obj[twe].marks>60)
+   {
+       console.log(obj[twe].name+":"+obj[twe].marks)
+       
+   }}console.log(sum)
+}
+marks( [ { name: "Piyush", rollNumber: 31, marks: 80 }, { name: "Jenny", rollNumber: 15, marks: 69 }, { name: "Kaushal", rollNumber: 16, marks: 35 }, { name: "Dilpreet", rollNumber: 7, marks: 55 }, ])
+
+
+
+
+
+    </script>
+</body>
+</html>

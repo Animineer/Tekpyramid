@@ -1,0 +1,18 @@
+<link href={"/products"} classNamme="bg amber-300">Back to products</link>
+ 
+ 
+if you want to use hooks "use client"
+ client=js bundle
+ app- routes     // in react page routes
+ before 15+ ssr- static site generation ->after build->npm run build-> we can deploy
+ server->the build process is again and again (html file build again and again)-> when navigating from one  page to another
+ incremental
+
+
+
+styling with talwind
+ <div key={ele.id} classNamme='bg-funchasia w-75 h-75 g-4'>
+            <p >ele.title </p>
+            <Link href={`/products/${ele.id}`}>got to products</Link>         //productId
+            </div>
+ 

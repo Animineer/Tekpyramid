@@ -1,0 +1,55 @@
+.cards{
+    display: flex;
+    width: 100%;
+    gap: 2.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.card::-webkit-scrollbar {
+  display: none;
+}
+
+.card{
+    width: 275px;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(0.97);
+}
+
+.cardImage{
+    height: 180px;
+    width: 275px;
+    margin-bottom: 15px;
+}
+
+.cardImage img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-left: 10px;
+}
+
+.cardContent h6{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 13px;
+}
+
+.cardContent p{
+    color: rgb(90, 90, 90);
+    font-size: 14px;
+}
+

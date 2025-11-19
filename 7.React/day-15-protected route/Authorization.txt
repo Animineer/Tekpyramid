@@ -1,0 +1,78 @@
+Bearer  - means user who hold(or bear) the tokens - to access the resources
+header  - extra information send along with request and response , in http request
+content -type - data format- to send in header 
+
+Token -
+
+1.sigin with username and password->
+{
+  "email": "john@gmail.com",
+  "password": "1234"
+}
+
+
+
+2.send login data to backend
+
+fetch("http://localhost:8080/api/auth/login", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ email, password })
+});
+
+
+
+
+3.Backend verifies credentials
+Backend checks if user exists and password is correct.
+If valid, it creates a JWT token using a secret key.
+
+
+
+
+4.Backend creates the JWT
+
+import jwt from "jsonwebtoken";
+const user = { id: 1, email: "john@gmail.com" };
+
+const token = jwt.sign(
+  user,               // payload
+  "MY_SECRET_KEY",    // secret key
+  { expiresIn: "1h" } // token expires in 1 hour
+);
+
+console.log(token);
+
+
+
+5.backend send the token to frontend
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6..."
+}
+
+
+
+6.React stores the token
+localStorage.setItem("token", token);
+
+
+
+7.React sends token with each future API call
+
+const token = localStorage.getItem("token");
+
+fetch("http://localhost:8080/api/user", {
+  headers: {
+    "Authorization": `Bearer ${token}`
+  }
+});
+
+
+
+8.backend verifies the token
+
+const decoded = jwt.verify(token, "MY_SECRET_KEY");
+console.log(decoded); // { id: 1, email: "john@gmail.com", iat: ..., exp: ... }
+
+
+      

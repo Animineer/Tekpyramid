@@ -1,0 +1,143 @@
+how to use those params
+-----------------------
+run- npm run dev
+
+component
+-----------
+console.log("check")  //show whether it is running in server and client
+server-default 
+client-make component by usingin useclient
+
+server
+-------
+  run only on server
+  we cannot use any hooks
+  we cannot use event
+
+
+  create component folder -> we can create reusable component    
+         Departments folder ->page.tsx->rfce ->
+
+  create component folder ->inside->mainpage folder->mainpage.tsx
+
+client
+-------
+"use client" -on top of page (to access hooks and event)
+
+
+dynamic routing task
+---------------------
+1)fetch
+
+async function page(){  -> in the component function we will prefix with async
+
+  //fetch  
+
+}
+
+
+2)create route
+create folder products->page.tsx
+              
+
+webpack to turbopack 
+turbopack- faster in devlopment , not on deployment
+
+
+--------------------------------a/n----------------------------------------
+
+ 1)create route
+create folder products->page.tsx
+
+async function products(){
+
+  const resp=fetch()
+  const data=resp.json
+  console.log(data)
+
+}
+
+return(
+    {
+        data.products.map(()=(
+            <div key={ele.id} classNamme='bg-funchasia'>
+            <p >ele.title </p>
+            <Link href={`/products/${ele.id}`}>got to products</Link>         //productId
+            </div>
+        ))
+    }
+)
+
+2)in layout.tsx
+   <nav classNamme="bg-blue-400 p-4 ">   //used talwind already installed while creation of project
+   <link href={"/products"}>products</link>         
+   </nav>
+
+
+3)create a folder in product ->[productId] -> create page.tsx
+
+   params- object ->need to define datatype 
+        ->clg(params)->return promise
+
+   function product({params}:productParams)   // productParams is datatype
+
+
+
+   ii)interface productParams{
+    params:{
+        id:string                  //since we are passing in url
+    }
+   }
+    function product({params}:productParams)
+
+
+    iii)const {productId}=params
+    console.log(productId)  //get the id
+
+
+    interface productParams{
+    params:{
+        id:string                 //since we are passing in url
+    }
+   }
+    function product({params}:productParams)
+    const {productId}=params
+
+
+
+    iV)const productrep = await fetch(`     /${productId}`)
+        
+
+         interface productParams{
+    params:{
+        id:string                 //since we are passing in url
+    }
+   }
+    function product({params}:productParams)
+    const {productId}=params
+
+    const productrep = await fetch(`     /${productId}`)
+
+
+    v)return(
+        <div>
+        <h1>product details</h1>
+
+        <p>  productdata.title
+         <p> productdata.
+        <image src={productdata.images[0]} width={400} height={400}/>  // width is necessary
+        </div>                                                          //image is component of next.json
+                                                                        //lazy loading,responsive
+                                                                        
+    )
+
+
+
+    vi) in next.confi.ts       // for rendering image -if we get hosting use 
+
+    images:{
+         remotePatterns:{                   //keyname to define hostname
+         protocol:"https"
+            hostname:"cdn.dummyjson.com"
+         }
+    }

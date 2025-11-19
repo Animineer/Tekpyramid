@@ -1,0 +1,95 @@
+// counter with redux
+
+npm create vite@latest
+
+1)install libraries
+npm i react-redux -connect redux to react
+npm i @reduxjs/toolkit   -redux
+
+2)we have to create a store folder
+  create store.js
+   
+   import all reducer,state
+
+
+
+3) import {configureStore} form   "@reduxjs/toolkit"
+
+4)const store=configureStore({
+
+
+})
+
+
+------------------------------------------------------------------
+1)create counterSlice folder 
+  create file
+
+  import {createSlice} from "@reduxjs/toolkit"
+
+  const counterSlice =createSlice({
+    name="counter",
+    initialstate:{
+        number=0
+    },
+    reducer:{
+        add (state)=> {    //this state mention initialstate
+            state=state+1
+        }
+
+    }
+  })
+
+
+  export const {add}=counterSlice.actions; //function export
+  export default counterSlice.reducer . //slice export
+
+  -----------------------------------------------------------
+  before importing to App - we have to store in store 
+
+  import {configureStore form }  "@reduxjs/toolkit"
+
+  const store=configureStore({
+
+
+   })
+
+
+
+1)   import counterReducer from "../counterSlice/counterSlice
+
+import {configureStore form }  "@reduxjs/toolkit"
+
+  const store=configureStore({
+   
+   reducer:{
+    counter:counterSlice
+   }
+
+   })
+
+2)move to app 
+  import {useSelector} from "react-redux"  // to get the number -connect reduct and react
+
+  const counter= useSelector(store=>store.count.number )   before return
+
+3)mount the component 
+   <p>{counter }</p>
+
+
+4)provide the provider and also import {provider} from "react-redux"
+<provider store={store}>
+  <app>
+  </provider>
+  ---------------------------------------------------------------
+  1)creacte button
+  2)<button onclick={}
+
+  3)get the add function 
+   import {add} from  "./counterSlice/counterSlice"
+   import udeDispatch
+
+
+   5)const dispatch= useDispatch() before return
+
+   4)button onclick={()=>useDispatch(add())}

@@ -1,0 +1,87 @@
+footer{
+    width: 100%;
+    height: 700px;
+    background-color: rgba(192, 193, 200, 0.682);
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+footer .part1{
+     margin-top: 30px;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 1.5rem;
+}
+
+footer .part1 p{
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.764);
+}
+
+footer .part1 img{
+    width: 200px;
+    height: 70px;
+}
+
+footer .part2{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+
+footer .part2 .links1{
+    display: block;
+}
+
+footer .part2 .links1 .logoSwiggy{
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+
+footer .part2 .links1 .logoSwiggy span{
+    color: rgb(255, 128, 0);
+    display: flex;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+footer .part2 .links1 .logoSwiggy img{
+    height: 70px;
+    width: 70px;
+}
+
+.links1,.links2,.links3,.links4,.links5{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.links1 a,.links2 a,.links3 a,.links4 a,.links5 a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.715);
+}
+
+.inside{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    margin-top: 150px;
+}
+
+.sLink{
+    margin-top: 100px;
+}
+
+.sLink .icons{
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 20px;
+}

@@ -1,0 +1,20 @@
+1. how Event loop works in JS?
+2.scopes
+3. what is hoisting? variable and functional hoisting?
+4.what is closure ? use case of closure? Can closures cause memory leaks? Why/why not?
+5.event delegation?
+6.destructuring?
+7.how to clone an object?
+8.Diff between spread and rest operator?
+9.Difference between named export and default export
+10.What is optional chaining (?.)?
+11.How does setTimeout and setInterval work internally?
+12. What are Web APIs in the browser?
+13. What is CORS?
+14. What is Debouncing and Throttling?
+15. Explain the difference between localStorage, sessionStorage, and cookies.
+16. What is DOM and BOM?
+17.what is this keyword? How does this keyword work in different contexts 
+18. What is the difference between call, apply, and bind?
+19. Explain prototype and prototypal inheritance.
+20. what is polyfill?

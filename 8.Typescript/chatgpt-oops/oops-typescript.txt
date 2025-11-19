@@ -1,0 +1,56 @@
+Class
+-------------
+Blueprint for creating objects.
+Contains properties (variables) and methods (functions).
+
+Object
+-------
+Instance of a class (created using new).
+
+Encapsulation
+---------------
+Wrapping data and methods into a single unit (class).
+
+Controlled with access modifiers:
+public → accessible everywhere (default).
+private → accessible only inside the class.
+protected → accessible inside class + subclasses.
+readonly → can be read but not modified.
+
+Inheritance
+---------------
+One class can inherit properties & methods of another using extends.
+Promotes code reuse.
+
+Polymorphism
+-------------
+Same method name behaves differently based on the class.
+Achieved via method overriding and interfaces.
+
+Abstraction
+-------------
+Hiding implementation details and showing only functionality.
+Achieved with:
+Abstract classes (with abstract methods).
+Interfaces (contracts that classes must implement).
+
+Constructor
+---------------
+Special method (constructor) used to initialize objects when created.
+Static Members
+----------------
+static keyword makes properties/methods belong to the class itself (not instance).
+
+Getters and Setters
+--------------------
+Control access to private properties.
+
+get → to read value.
+
+set → to modify value.
+
+Method Overloading (limited in TS)
+---------------------
+Same method name with different parameter types/count.
+
+Achieved via function signatures in TypeScript.

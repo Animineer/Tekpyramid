@@ -1,0 +1,27 @@
+apply css
+------------
+global css
+       -create one style folder
+       -create file global.css
+
+        -import "./styles/global.css"
+
+
+inline css
+       <h1 style={{color:"red"}}>
+
+
+module.css
+       -use   .module.css  in file name
+       -create About.module.css
+
+       -import {style} from "../components/About.module.css"
+       -style.className -> <div className={style.container}>
+
+
+       .main{
+                h1{
+                     
+                }
+       }
+        

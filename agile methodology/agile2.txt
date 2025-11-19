@@ -1,0 +1,4 @@
+requirement gathering-
+   the given project given by client -product manager will plan duration and team needed to complete
+    stakeholders()
+

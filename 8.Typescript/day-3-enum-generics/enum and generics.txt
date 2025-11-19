@@ -1,0 +1,85 @@
+Enum- limit (there are only 4 arrow keys in our keyboard that is the limit)
+------
+
+we will keep constant in seperate filename
+   -> we can reuse, with the help of key
+   ->maintained in single filename
+   ->no need to define datatype, type or interface
+
+
+enum myConstants{  // enum is keyword
+              // default value is 0
+}
+
+
+number
+----------
+enum myConstants{  
+       key=value
+        fname,   //0
+        lname    //1
+        address=10;                                             if address="hello"
+        pincode  // 11->since the previous value is 10             pincode   //undefined
+}
+console.log(myConstants.fname) //1
+
+
+
+string
+---------
+
+enum myConstants{  
+      
+}
+console.log(myConstants.fname) //1
+
+
+standard codes
+------------
+enum httpstatus{
+    success=200,
+    not found=404,
+    internal_server_error=500
+}
+console.lgo(httpstatus.success)  //200
+
+enum signupConstants{
+    fname="enter first name",
+    lname="enter last name"
+    signup="signup"
+    mobile no=7987987
+}
+
+
+
+GENENRICS- t (use when we dont know what type of datatype we are going to use)
+----------
+
+if we wont define datatype the default one will be any
+
+js
+function addition (a,b){
+    return a+b
+}
+console.log(addition(2,3))
+console.log(addition("java","script"))
+
+let arr2: number[]=[2,4] ways to use array
+let arr:Array <number>=[2,3,4]            // array,promise is inbuilt GENENRIC
+let arr1:Array <string>=["js","react"]
+
+t is a parameter
+let arr:arrname <T>
+let arr:<number>
+
+
+function add <T> (val :T):T   // can use without using any datatype
+{
+    return val;
+}
+console.log(add(4));   //4
+console.log(add("hello"));  //hello
+console.log(add<number>(4));
+
+
+//return type is different

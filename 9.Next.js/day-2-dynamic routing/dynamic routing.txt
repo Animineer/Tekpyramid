@@ -1,0 +1,36 @@
+security
+pagination
+1000 of data how will you handle
+
+
+dynamic routing in react js => we will use when we have api in array of object
+----------------------------
+createBorwserRouter({
+    [
+       path:"/product/:id"   ->id is a variable 
+       element:
+    ]
+})
+  
+
+useParams
+
+const id=useParams()  ->id is the the variable we have used in router path
+console.log(id)  // we will get the id1 or id 2
+
+
+in next js
+-----------
+/app   ->page.tsx          "/"
+         in page we have
+         about            "/about" 
+         contact           "/contact"
+         products          "/products"  
+            [productId]      in product we have
+                page.tsx     nokia            "/products/iphone"
+                             blackberry
+                             motto
+                             vivo
+ 
+        [productId](also can be) [Id]
+                                 page.tsx

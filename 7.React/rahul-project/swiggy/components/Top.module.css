@@ -1,0 +1,19 @@
+.top {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.top::-webkit-scrollbar {
+  display: none;
+}
+
+.top img {
+  height: 180px;
+  width: 150px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  border-radius: 8px;
+}

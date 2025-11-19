@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainContainer{
+            height: 100%;
+            width: 100vw;
+            display: flex;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mainContainer">
+
+    </div>
+
+
+
+
+    <script>
+       function fetchData(){
+    fetch("https://dummyjson.com/products") //returns a promise-o/p will promise and it states
+    .then(res=> res.json())
+    .then(data=>{
+         
+         let productsData = data.products;
+         productsData.map((val)=>{
+            console.log(val)
+            
+            let mainContainer= document.getElementById("mainContainer");
+           
+            // created a div
+            let div = document.createElement("div")
+            div.style = "background-color : pink"
+            div.style.width = "400px";
+            div.style.height = "400px"
+ 
+            // created one p element
+            let p = document.createElement("p")
+            p.textContent = `Title : ${val.title}`
+
+            // creating image Element 
+            let img = document.createElement("img");
+            img.src = `${val.images[0]}`;
+            img.style.width = "200px"
+            img.style.height = "200px"
+           
+
+            mainContainer.append(div);
+            div.append(p,img)
+         })
+    })
+ 
+   
+}
+ 
+fetchData()
+
+
+    </script>
+</body>
+
+</html>

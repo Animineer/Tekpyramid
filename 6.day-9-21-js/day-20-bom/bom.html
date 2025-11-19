@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>BOM Mini Projects</title>
+<style>
+body { font-family: Arial; padding: 20px; }
+section { margin-bottom: 30px; border: 1px solid #ccc; padding: 10px; border-radius: 10px;
+}
+button { margin: 5px; }
+</style>
+</head>
+<body>
+<h1>BOM Mini Projects</h1>
+<!-- 2. Window Methods -->
+<section>
+<h2>Window Popup Manager</h2>
+<button onclick="openWin()">Open Window</button>
+<button onclick="moveWin()">Move Window</button>
+<button onclick="resizeWin()">Resize Window</button>
+<button onclick="closeWin()">Close Window</button>
+<script>
+let myWindow;
+function openWin() {
+myWindow = window.open('', '', 'width=300,height=200');
+myWindow.document.write('<p>This is a new window</p>');
+}
+function moveWin() {
+if (myWindow) myWindow.moveTo(100, 100);
+}
+function resizeWin() {
+if (myWindow) myWindow.resizeTo(400, 300);
+}
+function closeWin() {
+if (myWindow) myWindow.close();
+}
+</script>
+</section>
+<!-- 3. Navigator Object -->
+<section>
+<h2>Browser Info Detector</h2>
+<p id="nav-info"></p>
+<p id="cookie-warning"></p>
+<script>
+document.getElementById("nav-info").textContent = `Browser: ${navigator.userAgent},
+Platform: ${navigator.platform}, Language: ${navigator.language}`;
+if (!navigator.cookieEnabled) {
+document.getElementById("cookie-warning").textContent = '⚠️ Cookies are disabled in
+your browser!';
+}
+</script>
+</section>
+<!-- 4. Screen Object -->
+<section>
+<h2>Screen Info Report</h2>
+<p id="screen-info"></p>
+<p id="screen-warning"></p>
+<script>
+document.getElementById("screen-info").textContent = `Width: ${screen.width}, Height:
+${screen.height}, Color Depth: ${screen.colorDepth}`;
+if (screen.width < 768) {
+document.getElementById("screen-warning").textContent = '�� Your screen is small —
+switch to desktop for better experience.';
+}
+</script>
+</section>
+<!-- 5. Location Object -->
+<section>
+<h2>URL Inspector Tool</h2>
+<p id="url-info"></p>
+<button onclick="location.reload()">Reload Page</button>
+<button onclick="location.assign('https://www.google.com')">Go to Google</button>
+<script>
+document.getElementById("url-info").textContent = `Hostname: ${location.hostname},
+Path: ${location.pathname}, Protocol: ${location.protocol}`;
+</script>
+</section>
+<!-- 6. History Object -->
+<section>
+<h2>Custom Navigation Panel</h2>
+<button onclick="history.back()">Back</button>
+<button onclick="history.forward()">Forward</button>
+<p>Total history length: <span id="history-length"></span></p>
+<script>
+document.getElementById("history-length").textContent = history.length;
+</script>
+</section>
+<!-- 7. Display Boxes -->
+<section>
+<h2>User Interaction Demo</h2>
+<button onclick="interact()">Start Interaction</button>
+<p id="user-output"></p>
+<script>
+function interact() {
+let name = prompt("Enter your name:");
+if (name) {
+let confirmMsg = confirm("Is your name " + name + "?");
+if (confirmMsg) {
+alert("Welcome, " + name + "!");
+document.getElementById("user-output").textContent = `Hello, ${name}!`;
+}
+}
+}
+</script>
+</section>
+<!-- 8. Timers -->
+<section>
+<h2>Digital Timer</h2>
+<p id="timer">0</p>
+<button onclick="startTimer()">Start</button>
+<button onclick="stopTimer()">Stop</button>
+<script>
+let count = 0;
+let intervalID;
+function startTimer() {
+intervalID = setInterval(() => {
+document.getElementById("timer").textContent = ++count;
+}, 1000);
+setTimeout(() => alert("Timer running for 5 seconds!"), 5000);
+}
+function stopTimer() {
+clearInterval(intervalID);
+}
+</script>
+</section>
+</body>
+</html

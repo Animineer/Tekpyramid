@@ -1,0 +1,140 @@
+user reducer
+------------
+      current state 
+      action 
+
+      will give new state
+
+
+cont [state, dispatch ]=useReducer(reduce,initialvalue)
+
+1)create 3 button 
+     increment
+     decrement 
+     reset
+
+2)create state // we dont want 
+    const [count, setcount]=useState(0)
+
+3)useReducer(reducer,{count :0})
+
+4)create function
+     
+     let reducer=()=>{
+
+     }
+
+5)const[state,dispach]=useReducer(reducer ,{count:0})
+
+6)
+    let reducer=(reduce,action)=>{
+        switch(action.type)
+        {
+            case "increment":return {count:state.count+1}
+            case "decrement":return {count:state.count-1}
+            case "reset" :{count:0}
+        }
+
+     }
+
+7)
+  <button onClick={()=>dispatch ({type:"increment"})}
+                  {()=>dispatch ({type:"decrement"})}
+                  {()=>dispatch ({type:"reset"})}
+
+
+8)<P>{state.count}
+
+import React, { useReducer } from 'react';
+
+// Reducer function
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+}
+
+function Counter() {
+  const initialState = { count: 0 };
+
+  // useReducer returns [state, dispatch]
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <div>
+      <h2>Count: {state.count}</h2>
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+    </div>
+  );
+}
+
+export default Counter;
+
+
+state uplifting
+--------------------
+take 2 same component
+->have some increment function with 1 button 
+(if, click on 1 button it will only impact one component )
+
+use state in app =the data will pass through all =>it will render two component
+use state in child =the data will pass through all =>it will render only one  component
+
+
+import React, { useState } from 'react'
+import Parent from './Components/Parent/Parent'
+import Child from './Components/Child/Child'
+ 
+ 
+export default function App() {
+  let [data,setData] =useState({ })
+  console.log(data)
+  return (
+    <>
+      <Parent><Child title='1st parent' data={data} setData={setData}/></Parent>
+      <Parent><Child title='2nd parent' data={data} setData={setData}/></Parent>
+ 
+ 
+    </>
+  )
+}
+ 
+import React from 'react'
+import Child from '../Child/Child'
+ 
+export default function Parent({children}) {
+  return (
+    <>
+    <p>Parent Components</p>
+    {children}
+    </>
+  )
+}
+ 
+import React, { useState } from 'react'
+ 
+export default function Child({title,data,setData}) {
+ 
+    let increment=()=>{
+        setData(pre=>( {...pre,
+            [title] : (data[title] || 0)+1
+        }))
+    }
+ 
+ 
+  return (
+    <>
+    <hr/>
+    <p>{data[title]}</p>
+    <button onClick={increment}>Add</button>
+    <hr/>
+    </>
+  )
+}
+ 

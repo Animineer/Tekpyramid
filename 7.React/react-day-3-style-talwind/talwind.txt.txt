@@ -1,0 +1,34 @@
+1)visit webstie
+https://tailwindcss.com/docs/installation/using-vite
+
+2)intall library
+npm install tailwindcss @tailwindcss/vite
+
+3)Add the talwind in vite configuration
+
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+
+
+
+4)import tailwind  to css file
+@import "tailwindcss";
+
+
+----------------------------------------------
+for ant design
+npm install antd --save
+
+--------------------------------------------
+for react icon
+npm install react-icons --save
+
+---------------------------------------------
+for mui
+npm install @mui/material @emotion/react @emotion/styled

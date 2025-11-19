@@ -1,0 +1,8 @@
+build command:npm run build
+publish directory:buid (for react)dist (for vite).next(for next) 
+
+
+add in vite configuration file
+build: {
+    outDir: 'build'
+  }

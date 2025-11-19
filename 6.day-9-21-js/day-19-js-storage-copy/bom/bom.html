@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<section>
+    <h2>Window Object</h2>
+    <button onclick="openWin()">Open Window</button>
+    <button onclick="moveWin()">Move Window</button>
+    <button onclick="resizeWin()">Resize Window</button>
+    <button onclick="closeWin()">Close Window</button> 
+    
+    <h2>Digital Timer</h2>
+    <p id="timer">0</p>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+
+ </section>
+
+<section>
+    <h2>Navigation Object</h2>
+    <ul id="nav"></ul>
+    <p id="cookie-warning"></p>
+</section>
+
+<section>
+    <h2>Screen Object</h2>
+    <button onclick="showScreenInfo()">Show Screen Info</button>
+    <pre id="info"></pre>
+</section>
+
+<section>
+    <h2>Location Object</h2>
+     <button onclick="location.reload()">Reload Page</button>
+     <button onclick="replace()">replace</button>
+</section>
+
+ <section>
+    <h2>History Object</h2>
+    <a href="http://127.0.0.1:5500/html/DOM_fetch/BOM/forward.html">Next Page</a><br><br>
+    <button onclick="goBack()">Back</button>
+  <button onclick="goForward()">Forward</button>
+    <p>Total history length: <span id="history-length"></span></p>
+</section>
+
+<section>
+     <h2>User Interaction Demo</h2>
+    <button onclick="interact()">Start Interaction</button>
+    <p id="userOutput"></p>
+</section>
+
+<body>
+    <script src="bom.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+type,interface ,tuple
+-----------------------
+
+
+object-in javascript
+--------------------
+let obj={
+    name:"pankaj"
+    age:18
+}
+--------------------------------
+object
+let obj={
+    name:string:"pankaj"
+}
+----------------------------------------
+typescript
+----------
+let obj={
+    name:string,
+    phonenumber:number
+}={
+    name:"pankaj",
+    phonenumber:46546546
+}
+
+
+
+
+DECLARATION - type and interface
+
+type
+-----
+type obj={
+    name:string,
+    phonenumber:number,
+    id:number | string,        readonly id:number | string,  -->we cant modify
+    ismarried:boolean          ismarried?:boolean ->need not necessary to give value
+}
+
+interface
+----------
+interface obj={
+    name:string,
+    phonenumber:number,
+    id:number | string,
+    ismarried:boolean
+}
+
+
+
+ASSIGNING
+type
+-----
+type obj={
+    name:string,
+    phonenumber:number,
+    id:number | string,        readonly id:number | string,  -->we cant modify
+    ismarried:boolean          ismarried?:boolean ->need not necessary to give value
+}
+type user={
+    address:string     ->throw an error
+}
+interface
+----------
+interface obj={
+    name:string,
+    phonenumber:number,
+    id:number | string,
+    ismarried:boolean
+}
+type user={
+    address:string
+}
+
+
+ASSIGNING value to multiple object
+----------------------------------
+type user2= user & 
+{
+    pincode:number
+}
+
+interface user2 extends user{
+    pincode:number
+}
+
+
+EXPORT 
+---------
+export{} to use the object in same file 
+
+
+TUPLE
+----------
+Tuple- an array form
+let array:string[]=[      ]
+let array:[number,string]=[25,"abc"]
+
+   ->two data type-number string
+   ->can use array method
+
+let array:readonly[number,string]=[25,"abc"]  ->read only- cant use array method->cant modified
+
+
+FUNCTION
+-------------
+
+function greet(name: string): string {
+  return `Hello, ${name}`;
+  
+}
+
+console.log(greet("Alice")); // Hello, Alice

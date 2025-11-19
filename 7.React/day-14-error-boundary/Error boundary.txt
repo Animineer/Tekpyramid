@@ -1,0 +1,39 @@
+1) install library
+   npm install react-error-boundary
+
+2)create a fallback component ( this ui is rendered when the error occurs)
+   import React from "react";
+
+   function Fallback({ error, resetErrorBoundary }) {    // we will pass the error message as a props from Buggy component -throw
+   return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+
+      <h2>Something went wrong 😞</h2>
+      <p>{error.message}</p>
+      <button onClick={resetErrorBoundary}>Try again</button>
+    
+    </div>
+   );
+   }
+
+   export default Fallback;
+
+3)create a buggy component
+   
+   import React from "react";
+
+function BuggyComponent() {
+  throw new Error("Crashed inside functional component!");
+}
+
+4)provide the error boundary
+  
+import { ErrorBoundary } from "react-error-boundary";   // error boundary
+import Fallback from "./Fallback"; //( this component ui is rendered when the error occurs)
+
+<ErrorBoundary FallbackComponent={Fallback}>
+
+<BuggyComponent />
+
+</ErrorBoundary>
+

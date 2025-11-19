@@ -1,0 +1,64 @@
+SDLC
+agile-modify the fearure (disadvantage -take time alot of time to complete since modification can be done )
+waterfall-old (give an entire details- cant modified)
+V-MODEL-verification 
+increment
+rad-radpid application devlopment
+
+jira-project management tool -status of project(pending or completed)
+
+agile methodology
+types
+   scrum-we will use scrum
+   kanban
+   xp
+   apf
+   xpm
+   asd
+   dsdm
+   fdd
+works
+   project planning-design devlopment-testing and review-deployment
+
+1)requirement gathering
+    planning done by project manager team- how much member need to complete project
+
+2)epic and users stories
+    application -split-into   10 module (epic)- userstories(given )
+
+3)storypoints -1story point=4hrs
+    time take to complete the give module
+
+4)scrum Team meeting-dsm
+    asked about -(time take to complete module) to u
+    all productive team-sync-what is going onError
+    15minutes-what you did yesterday, what you will do, any blockers
+
+5)sprint planning
+    in particular sprint how much module can be completed -planning
+    if the project duration is 1 year- we will split in weeks(sprint)
+
+6)sprint execution
+    all work will we done parallel
+
+deployment and coding
+     code and complete module- each day we have dsm
+      in dsm
+       a/m -module to be completed, client changes,storypint (time take to complete)
+         
+testing and review
+     we will move to sprint restrospective-review the project
+
+7)sprint review/ceremony(genrally 2-4 weeks)
+     show demo project- changes will be given(with client and our all team)
+      need some extra feature
+      emergency feature will be fixed in priority-given anytime
+
+10) restrospective
+    challenges faced-discussion
+    
+11)release & maintainese
+    deployment after some sprint
+
+12)agile meeting
+   

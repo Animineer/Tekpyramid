@@ -1,0 +1,23 @@
+ 
+ 1)take number of product we want per page
+ const itemperpage=10;
+
+2)caluculate the total pages
+  const totalpages=(product.length/10)
+                   //Math.ceil(product.length/10)
+
+3)calculate starting and ending index for slice
+   const startindex=(currentpage-1)*itemperpage // will start with 0
+   const endindex=startIndex + itemperpage
+    
+    
+    we have a state where current page value is 1
+    const [currentPage, setCurrentPage] = useState(1);
+
+
+    // to find for secondpage-we will try to find the refrence
+
+
+
+4)const currentItems=product.slice(startIndex,endindex)  //will omit last one
+

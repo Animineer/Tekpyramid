@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --primary-size:16px;
+    --secondary-size:18px;
+
+    --primary-color:#ffffff;
+    --secondary-color:#000000;
+    --reddish-color:rgb(255, 136, 0);
+
+    --primary-weight:600;
+}
+
+.nav{
+    height: 80px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.081) 0px 5px 15px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    background-color: #fff;
+}
+
+.logoSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logoSection .logoImg{
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+}
+
+.others{
+    display: flex;
+    align-items: center;
+}
+
+.others span{
+    text-decoration: underline;
+    text-underline-offset: 7px; 
+    font-size: var(--primary-size);
+    font-weight: var(--primary-weight);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.others span:hover{
+    color: var(--reddish-color);
+}
+
+.links{
+    display: flex;
+    gap: 3rem;
+}
+
+.links div{
+    font-size: var(--primary-size);
+    font-weight: var(--primary-weight);
+    color: #000000e3;
+    word-spacing: 1px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.links div:hover{
+    color: var(--reddish-color);
+}
+
+
+.links div sup{
+    color: orange;
+    font-size: 10px;
+    position: relative;
+    bottom: 6px;
+    font-weight: var(--primary-weight);
+}
+
+.links div .linkLogo{
+    font-size: 20px;
+}
+
+.IoIosArrowDown{
+    color: var(--reddish-color);
+    font-size: var(--secondary-size);
+}

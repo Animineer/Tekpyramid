@@ -1,0 +1,15 @@
+create your own api
+1)terminal => npm i json-server -g
+2)creat json file->db.json ->write the json code
+3)json-server -- watch db.json --port 4000
+
+
+useEffect->
+   whe we need some side effects
+   like- feching apis 
+   []-render only once
+   no []- all the times render
+   [3]- when we get the value - it will rerender
+
+
+   

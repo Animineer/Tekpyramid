@@ -1,0 +1,113 @@
+JavaScript:
+
+1. what is JavaScript?
+2. how Event loop works in JS?
+3. let, var, const
+4. datatypes in JS?
+5. Operators?
+6. Control flow and conditional statements (for,while,do while, if if     else, else if, switch)
+7. scopes
+8. what is function ? different types of functions?
+9. what is hoisting? variable and functional hoisting?
+10. what is closure ? use case of closure? Can closures cause memory leaks? Why/why not?
+11. What are generator functions?
+12. what is event propagation, event bubbling, event capturing, event delegation?
+13. what are ES6 features?
+14. what is promise? how to handle promises? promise methods
+15. what is destructuring?
+16. how to clone an object?
+17. Diff between shallow copy and deep copy?
+18. Diff between spread and rest operator?
+19. Array methods? 
+20. Diff between map, filter, reduce, for each, splice, slice?
+21. Object methods?
+22. Diff between freeze and seal?
+23. String methods?
+24. Number and Math 
+25. what is callback hell?
+26. what is promise chaining?
+27. What is async/await and how does it simplify asynchronous code?
+28. Difference between named export and default export.
+29. What is optional chaining (?.)?
+30. How does setTimeout and setInterval work internally?
+31. What are Web APIs in the browser?
+32. What is CORS?
+33. What is Debouncing and Throttling?
+34. Explain the difference between localStorage, sessionStorage, and cookies.
+35. What is DOM and BOM?
+36. Difference between innerText, textContent, and innerHTML.
+37. what is this keyword? How does this keyword work in different contexts 
+38. What is the difference between call, apply, and bind?
+39. Explain prototype and prototypal inheritance.
+40. what is polyfill?
+
+
+REACT:
+
+1. What is React? Why is it used?
+2. What are the main features of React?
+3. Difference between functional and class components.
+4. What are props? What is state in React?
+5. Difference between props and state.
+6. what is VDOM? Reconciliation process and diffing algorithm?
+7. Difference between controlled and uncontrolled components.
+8. What are pure components?
+9. What is state uplifting in React?
+10. what are hooks in React?
+11. what are custom hooks?
+12. what is HOC(Higher Order Component)
+13. Difference between useState and useReducer.
+14. what is useEffect and what are side effects?
+15. what is prop drilling? 
+16. what is context api?
+17. how to manage a state globally in react js?
+18. What is the use of key prop ?
+19. What is useRef and when to use it?
+20. How to optimize performance in React applications?
+21. Difference between useMemo and useCallback.
+22. what is lazy loading?
+23. what is code splitting in react?
+24. How does routing work in React?
+25. What are useNavigate and useParams hooks?
+26. How do you handle forms in React?
+27. How do you handle validation in React forms?
+28. What is React fiber?
+29. Difference between class component lifecycle methods and hooks.
+30. what is tree shaking?
+31. What is React StrictMode?
+32. What is Redux Tool Kit(RTK) and why do we use it?
+33. Explain the Redux flow
+34. What is middleware in Redux? Diff between Redux Thunk and Saga?
+25. Explain RTK Query?
+26. How does React handle error boundaries?
+27. What is batching ? Why does React batch state updates?
+28. what is react fragments?
+29. what are bundlers? features of bundlers?
+30. current version of React, react-router-dom?
+
+Next.js
+1.What is Next.js, and how is it different from React?
+2.Explain the difference between SSR, SSG, ISR, and CSR in Next.js.
+3.How does routing work in Next.js compared to React Router?
+4.What are the key features introduced in Next.js 13 and the App Router?
+5.How do getStaticProps, getServerSideProps, and getStaticPaths work?
+6.What is Incremental Static Regeneration (ISR), and how does it work?
+7.Explain the difference between Server Components and Client Components in Next.js 13.
+8.How do you fetch data in a Server Component vs a Client Component?
+9.How does next/image optimize images automatically?
+10.What is automatic code splitting in Next.js, and why is it useful?
+11. Difference between app router and page router
+
+
+
+
+
+
+
+
+
+
+
+
+
+

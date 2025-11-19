@@ -1,0 +1,18 @@
+throttling- control function run (0-2sec-if we set once- it will take only once)
+             function execute only once at specifit time
+             scrolling ,window rezize,mouse move - it will call function multiple time
+             closure
+             can use loadash library
+             true -twice run (leading:true , trailing:true )
+
+
+debounce                     throttling
+
+execute after trigger       execute function at regular interval -continuous triggger
+eg:search suggestion
+
+
+debounc:
+Debouncing is a technique used to limit how often a function executes. It ensures
+that a function runs only after a specified delay once the user stops triggering
+events (like typing or scrolling).​

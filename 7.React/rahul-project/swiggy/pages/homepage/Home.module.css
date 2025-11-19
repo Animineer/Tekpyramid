@@ -1,0 +1,67 @@
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    width: 80%;
+    overflow: hidden;
+    height: 100%;
+    margin-top: 100px;
+}
+
+.title{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title h3{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+h3{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.arrows{
+    display: flex;
+    gap: 1rem;
+}
+
+.arrows div{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: rgba(194, 194, 194, 0.841);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.arrows div:first-child{
+    opacity: 40%;
+}
+
+.arrows .arrow{
+    color: black;
+}
+
+.hr{
+    margin: 50px 0px 40px 0px;
+    opacity: 30%;
+}
+
+.buttons span{
+    margin-right: 10px;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}

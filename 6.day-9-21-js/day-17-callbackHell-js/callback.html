@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+   // CODE FOR Callback Hell
+// a+b-c*d;
+ 
+function addition(a,b,callback1){
+    let sum = a+b;
+    console.log("sum value is", sum)
+    callback1(sum)
+}
+ 
+function subtraction(sumRes,c,callback2){
+    let sub = sumRes-c;
+    console.log("sub value is ", sub);
+    callback2(sub)
+}
+ 
+function multiply(subRes,d,callback3){
+    let mul = subRes*d;
+    console.log("mul val is", mul);
+    callback3(mul)
+}
+ 
+function display(finalRes){
+    console.log(finalRes, "FINAL RES")
+}
+ 
+addition(5,10, (sumRes)=>{
+    subtraction(sumRes,12, (subRes)=>{
+        multiply(subRes,20, (finalRes)=>{
+            display(finalRes)
+        })
+    })
+})
+
+// promises-
+let p= new promise((resolve, reject)=>
+{
+    let num=5;
+    if(num%2 !==0)
+    {
+        resolve("the given number is odd")
+    }
+    else
+    {
+        reject("the give number is even")
+    }
+})
+
+p.then((res)=>console.log(res)).catch((rej)=>console.log(rej))
+
+//promise.any (p4,p3,p1,p2,)- if first one rejected print next one
+//promise.race-if first one rejected wont print next one
+//promise.all-if one rejected - print only the rejected one,  else it will print the all resolve in an array
+//promise.allsettled-it will print the status in array of object
+
+
+//setTimeout -take callback function and time
+
+
+let p1=new Promise((resolve, reject)=>
+{
+    
+    if(true)
+    setTimeout(()=>{resolve(1)},3000)
+    else rejected("the promise is resolved")
+})
+
+
+let p2=new Promise((resolve, reject)=>
+{
+    if(2)
+    setTimeout(()=>{resolve(2)},4000)
+    else rejected("the promise is resolved")
+})
+
+
+let p3=new Promise((resolve, reject)=>
+{
+    if(true)
+    setTimeout(()=>{resolve(3)},5000)
+    else rejected("the promise is resolved")
+})
+Promise.allSettled([p1,p2,p3]).then((res)=>console.log(res))
+// const value=[]
+// const status=[]
+// for (i=0; i<res.length; i++)
+// {
+//     result=res[i]
+//     value.push(result.value)
+//     status.push(result.status)
+// }
+// console.log("value"+value)
+// console.log("status"+ status)
+// }
+
+</script>
+</body> 
+</html>

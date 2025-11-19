@@ -1,0 +1,44 @@
+
+props
+-------
+  prop is an object
+  when we want to pass the data from parent to child
+  immutable- cant change(in child)
+
+destructuring
+--------------
+  1)we should declare above return
+     const{myname, age}= props
+
+    inside return
+    <p>{myname}</p>
+
+
+  2)function child({myname, age})
+    <p>{age}</p>
+
+-------------------------------------------------------------------
+useState
+---------
+
+
+conditional rendering
+--------------------
+shortcircuit
+a<b && console.log("hello)
+
+
+-----------------------------------------------------------------
+take parent child and grand child
+in three level of component we will use children instead of props
+
+children- is a keyword
+
+<children>
+     hello
+</children>
+
+function children({children})
+
+in retun
+<p>{children}<p/>

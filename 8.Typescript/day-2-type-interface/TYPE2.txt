@@ -1,0 +1,143 @@
+typescript
+need node and npm
+
+npm i-g typescript  ->g to install globally
+npm init ->to get package.json  or npm init -y 
+create file filename ->.ts 
+run->
+    befor run we need to convert 
+    convert .ts to js ->command npx tsc script.ts(filename) ->tsc-typescript compiler ->
+                                 npx tsc script.ts --watch
+
+run ->node script.js or node script.ts
+
+npm i nodemon (like a server)-> run again and again 
+npx nodemon script.js(filename)
+
+-----------------------------------------------------------------
+
+statically type language =Ts=>error=>while devlopment
+dynamically              =js=>error=>run time
+
+
+datatypes
+-----------
+
+    js                                 tS
+    ----                              ----
+let a=10;                  | let a:number=10        // number is datatype
+    a="hello"              |     a="hello"          // X not possible
+
+let a-datatype -undefined  | 
+                            
+
+tS
+--
+let val:number|string;  // | is union take both
+
+     possible        not
+
+let a;         | 
+    a=10       |  let a=10;
+    a="hello"  |      a="hello"
+
+
+
+
+
+
+
+
+
+Enum
+
+type user ={
+
+username:string,
+userid:sting | number
+
+}
+
+datatype is user
+
+let user1:user{
+   username:"swathi",
+    userid:123
+}
+
+let user1:user{
+   username:"spoorthi",
+    userid:323
+}
+
+user1.username="sam" ->modify
+
+-----------------------------------------
+any vs unknown
+---------------
+
+
+let a:any;
+a="hello"
+let res=a.toupperCase();
+
+let a:unknown;
+a="hello"
+let res=a.toupperCase();    //give an error
+
+so, we have to check datatype for unknown
+
+let a:unknown;
+a="hello"
+if(typeOf a="string")
+{
+let res=a.toupperCase(); 
+console.log(res)
+}
+
+
+//------------------------------
+function (a,b)
+{
+         //will take any datatype
+}
+add(2.3)
+
+
+//---providing datatype---------------
+function add (a:number ,b:number):number {      -->:number is return type
+    return a+b;
+}
+console.log(2,3);
+
+//-->o/p 5
+
+void & never 
+
+void->
+never->like throw 
+
+
+ENUM AND GENENRICS
+
+
+
+
+
+
+
+
+
+ARRAY
+let arr=[1,2,"hi"] 
+
+typescript
+let arr:number[]=[1,2,3]
+
+let arr:array<number>=[1,2,3,4]
+
+let arr:(string|number) []=[1,2,"hello",...]
+
+
+Rolebase- ROUTING
+according to use - ui render -access

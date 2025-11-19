@@ -1,0 +1,64 @@
+gitlab
+-----------
+visit gitlab website
+enter your email
+the fill the form
+choose software devloper   
+pankajkumar30
+Ramukjak@3
+
+
+create branch
+mainpage/pankaj-hospital-ui
+page name/name-projectname-ui
+
+npm i-to get all dependency of projectname
+npm i --force
+
+
+extentions-GitLens,Git Graph
+
+3)source controller 
+    stash-save the code virtually
+    write some message for understand-commit
+
+    three dot
+    pull,push ->pull from  --devlop
+    publish branch-
+     
+    three dot 
+    stash
+    apply latest stash
+
+
+pull the code every morning
+
+    stash all the changes first-undo arrow icon
+    commit-some messages
+
+     three dot
+    pull,push ->pull from-devloper branch
+    
+    sync changes-ok
+
+    local repo-stash -apply latest stash
+    
+    conflicst- resolve
+    stashed & current
+    if we want both - accept combination
+
+    complete merge
+    
+    publish branch-
+
+
+4)
+          under project
+          create merge
+          choose our path-your component and source-devlop
+          enter title and descriptions
+          choose assign as ourself and reviewer as tl
+          uncheck 2 check box 
+          submit
+
+

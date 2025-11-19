@@ -1,0 +1,9 @@
+Program - Output should be like this from given array of the object. 
+[ { date: "19-01-2025", minRecorded: "Telangana", min:18,
+                        maxRecored: "Andhra Pradesh", max: 30 } ] 
+
+Input: 
+
+const data = [ { state: "Telangana". date: "19-01-2025", min:16, max:28 }, 
+               { state: "Telangana". date: "18-01-2025", min:18, max:26 }, 
+               { state: "Andhra Prades", date: "19-01-2025", min:15. max:22 } ]

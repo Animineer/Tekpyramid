@@ -1,0 +1,55 @@
+npm install zustand
+
+import store from zustland
+------------------
+create
+create some actions
+
+using
+------
+import the store
+destrure those actions
+use those in event
+
+
+
+// Import create function from zustand
+import { create } from "zustand";
+
+// Create the store
+// Every line is commented for your preference
+const useCounterStore = create((set) => ({
+  count: 0, // State value
+
+  // Function to increase counter
+  increase: () => set((state) => ({ count: state.count + 1 })),
+
+  // Function to decrease counter
+  decrease: () => set((state) => ({ count: state.count - 1 })),
+
+  // Function to reset counter
+  reset: () => set({ count: 0 }),
+}));
+
+export default useCounterStore;
+
+--------------------------------------------------------
+import React from "react";
+import useCounterStore from "./useCounterStore";
+
+function Counter() {
+  // Extract required values from the store
+  const { count, increase, decrease, reset } = useCounterStore();
+
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+
+      <button onClick={increase}>Increase</button>
+      <button onClick={decrease}>Decrease</button>
+      <button onClick={reset}>Reset</button>
+    </div>
+  );
+}
+
+export default Counter;

@@ -1,0 +1,6 @@
+error boundary -to catch runtime error , like missing some data while fetching 
+	->Error Boundary is a special component that catches JavaScript errors anywhere in its child component tree, 
+          logs them, 
+          and displays a fallback UI instead of crashing the entire app.
+
+1)install library-npm install react-error-boundary

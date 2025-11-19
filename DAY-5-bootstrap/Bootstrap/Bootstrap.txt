@@ -1,0 +1,16 @@
+bootstrap
+link in 2-ways 
+  cdn link -content delivery network
+  download-1.files 2.node modules ->Bootstrap
+
+1.copy and paste link tag - in header
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+2.copy and paste script tag - before body close
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+3.download bootstrap intellisense- from extention in visual studio
+
+5.for flex ( d-flex ) for grid ( parent row) child ( coloumn -12 vw -divide them accordingly)
+
+6.md- medium, lg- large , text-center , text-primary for color, bg -blue

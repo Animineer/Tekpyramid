@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+      
+      //functions
+      //named functions
+
+      //function functionname(){ .... }   ->functionname()
+    
+      function add(a,b,c)
+      {
+        return sum=a+b+c;
+      }
+      console.log(add(5,6,7,8))   //pass 2arg=nan----pass 4arg=o/p will but exclude 4th one
+
+      //anonymous function
+      // let myfunc= function (){ }    ->myfunct()
+
+      //immediately invoke function   -> (    )()
+      // (function sub(x,y){
+      //     return x*y;
+      // })(5,2)
+
+      //arrow function -> let myfunc=(a,b)=>console.log(a,b)
+      //high order function -> pass function inside function as an argument 
+
+
+      // array method
+
+      let arr=[13,6,7,8,25,9]
+      //sort method
+      let res=arr.sort((a,b)=>a-b)  // use a-b or b-a for arranging 
+      console.log(res)     
+           
+      //some method
+      let res2=arr.some((ele)=> ele%2==0)
+      console.log(res2)       //true      //just like or any element is true it return true 
+      
+      //filter method
+      let res3=arr.filter((ele)=>ele%2===0)
+      console.log(res3)       //6,8
+
+      //flat method
+      let arr1=[10,20,[30,40,[60,80],90]]
+      console.log(arr1.flat(3))  //infinity for all
+
+      //reverse
+      
+      //fill-replacing
+      let arr3=[1,5,7,10]
+      console.log(arr3.fill(5,0,2))
+
+      //join
+      console.log(arr3.join())
+
+      //tostring
+      console.log(arr3.toString())
+      
+
+
+      
+
+
+    </script>
+    
+</body>
+</html>

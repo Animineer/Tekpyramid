@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --grey-color:#e3e6e6;
+    --blue-color:#044a70;
+    --red-color:#a20303;
+    --green-color:rgb(0, 70, 0);
+    --primary-color:#ffffff;
+    --secondary-color: rgb(72, 72, 72);
+    --header-color: rgb(7, 2, 49);
+    --background:  rgba(0, 0, 0, 0.5);
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey-color);
+}
+
+/* popup */
+
+.popup{
+    background-color: var(--header-color);
+    width: 200px;
+    height: 50px;
+    z-index: 99;
+    top: 100px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remup{
+    background-color: var(--header-color);
+    width: 300px;
+    height: 50px;
+    z-index: 99;
+    top: 100px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tik{
+    position: relative;
+    margin-left: 5px;
+    top: 2.5px;
+}
+
+.popup p{
+    color: var(--primary-color);
+    letter-spacing: 1.5px;
+}
+
+.remup p{
+    color: var(--primary-color);
+    letter-spacing: 1.5px;
+}
+
+.cardContainer {
+    width: 95%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+    gap: 1.3rem;
+    justify-content: center;
+    margin-top: 130px;
+}
+
+.card {
+    height: 230px;
+    width: 255px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    position: relative;
+    font-size: 12px;
+}
+
+.card span{
+    position: absolute;
+    right: 10px;
+}
+
+.card .star{
+    color: goldenrod;
+    font-size: 11px;
+}
+
+.card img {
+    height: 120px;
+    width: 130px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.card h1 {
+    font-size: 14px;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.card h2 {
+    font-size: 13px;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.card h3 {
+    font-size: 12px;
+    color: var(--blue-color);
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-weight: 650;
+}
+
+.cart {
+    color: var(--green-color);
+    float: right;
+    margin-top: -20px;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* header */
+
+.counting{
+    color: var(--primary-color);
+    padding: 2px 6px;
+    background-color: var(--red-color);
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    right: -20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header{
+    width: 100%;
+}
+
+nav {
+    height:85px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-color: var(--header-color);
+    position: fixed;
+    z-index: 99;
+}
+
+
+nav .menu, nav h3{
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--primary-color)
+}
+
+
+nav button{
+    border: none;
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+#ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: var(--primary-color);
+}
+
+
+/* cart page */
+
+
+.mainCartContainer{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    background: var(--background);
+    z-index: 98;
+    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartContainer{
+    width: 450px;
+    height: 80vh;
+    background-color: var(--primary-color);
+    position: absolute;
+    right: 10px;
+    top: 90px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+/* .cartContainer{
+    height: calc(90vh - 70px);
+    width: 450px;
+    padding: 20px;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    background: var(--primary-color);
+    z-index: 98;
+    display: none;
+} */
+
+@media (max-width:860px){
+    .cartContainer{
+        width: 350px;
+        right:10px;
+    }
+}
+
+.cartContainer h2{
+    color: var(--secondary-color);
+    font-size: 18px;
+}
+
+.cartContainer li{
+    color: var(--secondary-color);
+    font-size: 18px;
+}
+
+.cartInside{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartInside p{
+    color: var(--blue-color);
+    font-size: 14px;
+    margin-bottom: 10px;
+
+}
+
+.cartInside li{
+    width: 100%;
+}
+
+.removeButton{
+    background-color: transparent;
+    border: none;
+    color: var(--red-color);
+    font-size: 22px;
+}
+
+.remove{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.totalAmount{
+    float: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+.showCard {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.insideCard {
+  background: var(--primary-color);
+  padding: 24px;
+  width: 500px;
+  position: relative;
+  animation: zoomIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.insideCard img{
+    height: 400px;
+    width: 500px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: none;
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--red-color);
+}
+
+
+
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
