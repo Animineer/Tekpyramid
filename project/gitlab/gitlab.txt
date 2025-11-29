@@ -11,6 +11,8 @@ Ramukjak@3
 create branch
 mainpage/pankaj-hospital-ui
 page name/name-projectname-ui
+git checkout mainpage/pankaj-hospital-ui (for switching the branch)
+git push --set-upstream origin mainpage/pankaj-hospital-ui (since the branch is not in cloud)
 
 npm i-to get all dependency of projectname
 npm i --force
