@@ -21,6 +21,10 @@ export default defineConfig({
 @import "tailwindcss";
 
 
+Talwind  css
+https://chatgpt.com/share/68f4680e-cb00-8013-8869-5d887b9272f8
+
+
 ----------------------------------------------
 for ant design
 npm install antd --save
@@ -32,3 +36,5 @@ npm install react-icons --save
 ---------------------------------------------
 for mui
 npm install @mui/material @emotion/react @emotion/styled
+
+https://chatgpt.com/share/692ff415-50dc-8013-b128-3df5dfe3cb95
