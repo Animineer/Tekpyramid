@@ -58,7 +58,7 @@ public class DataTypeDemo {
         System.out.println(name + " is " + age + " years old.");
     }
 }
-```
+
 
 **Realtime Example:**
 In a **Banking App**:
@@ -67,7 +67,7 @@ In a **Banking App**:
 *   `int accountNumber` (Whole number)
 *   `boolean isActive` (True/False flag)
 
----
+
 
 ### 1.3 Operators and Expressions
 
@@ -421,6 +421,7 @@ Object-Oriented Programming (OOP) models real-world entities. A **Class** is a b
 3.  **Access**: Use the dot operator `.`.
 
 **Code Example:**
+
 ```java
 class Car {
     String model;
