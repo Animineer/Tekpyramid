@@ -1,0 +1,26 @@
+
+//Retry
+-------------
+useQuery(["task"],fetchTasks) 
+
+retries automaticalll-3 times -1s 2s 4s
+stop retrying if error is non retriable error (404)
+
+
+useQuery(["task"],fetchTasks,{
+    retry:2,      //retry only twice
+    retryDelay:(attemptIndex )=>Math.min(1000*2**attemptIndex , 30000), //custom delay 
+    retry:false //to disable
+})
+
+//cache
+useQuery (["task"],fetchTasks);
+
+react query - check if data for task is already in cache and return instantly
+if stale ->it refetches in background whil showing catch data
+use
+
+useQuery(["tasks"], fetchTasks, {
+  staleTime: 1000 * 60 * 5, // 5 minutes: consider fresh for 5 mins
+  cacheTime: 1000 * 60 * 10, // keep cache for 10 mins after unmount
+});

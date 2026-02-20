@@ -24,7 +24,7 @@ Promotes code reuse.
 
 Polymorphism
 -------------
-Same method name behaves differently based on the class.
+Same method name behaves differently based on the class.( like + will add also join string)
 Achieved via method overriding and interfaces.
 
 Abstraction

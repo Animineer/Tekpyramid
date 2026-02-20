@@ -22,6 +22,7 @@ useQuery({
   queryFn: fetchUsers,       // Function to fetch data from the server
   staleTime: 1000 * 60,      // (store for 1 min and (compare if new data)refetching)Time in ms before data becomes "stale" (here 1 minute)
   cacheTime: 1000 * 60 * 5,  // (in 1000 if we are using 500 remaining 500 will got to garbage collection)Time in ms before unused cached data is garbage collected (here 5 minutes)
+  
 })
 
 use mutation({
